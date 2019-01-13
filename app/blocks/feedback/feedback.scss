@@ -1,0 +1,94 @@
+.feedback {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+
+	&__bg {
+		position: absolute;
+		left: 0;
+		top: 0;
+		width: 100%;
+		height: 100%;
+		background-color: $color-bg;
+		z-index: -1;
+	}
+
+	&__form {
+		background-color: #fff;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+		padding: 15px;
+		border: 1px solid  $color-border;
+		border-radius: 5px;
+		width: 340px;
+
+		&-wrap {
+			position: relative;
+		}
+	}
+
+	&__input {
+		width: 100%;
+		padding: 0 10px;
+		height: 25px;
+		border-radius: 5px;
+		border: 1px solid #000;
+
+		&-wrap {
+			width: 100%;
+			position: relative;
+			margin-top: 25px;
+		}
+	}
+
+	&__placeholder {
+		position: absolute;
+		left: 10px;
+		top: 2px;
+	}
+
+	&__textarea {
+		resize: none;
+		height: 200px;
+		padding: 10px 10px;
+		width: 100%;
+		border-radius: 5px;
+	}
+
+	&__close {
+		position: absolute;
+		right: 0;
+		top: 0;
+		width: 15px;
+		height: 15px;
+		border: 1px solid $color-main;
+		border-radius: 50%;
+		cursor: pointer;
+
+		&::after,
+		&::before {
+			content: '';
+			position: absolute;
+			width: 100%;
+			height: 1px;
+			background-color: $color-main;
+			top: calc(50% - .5px);
+			left: 0;
+		}
+
+		&::before {
+			transform: rotate(45deg);
+		}
+
+		&::after {
+			transform: rotate(-45deg);
+		}
+	}
+}

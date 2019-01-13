@@ -1,0 +1,16 @@
+mixin feedback()
+  +b.feedback
+    +e.bg
+    +e.form-wrap
+      +e.FORM.form(method="post")
+        +e.input-wrap
+          +e.INPUT.input(name="name" type="text")
+          +e.placeholder Ваше имя
+        +e.input-wrap
+          +e.INPUT.input(name="phone" type="phone")
+          +e.placeholder Ваш телефон
+        +e.input-wrap
+          +e.TEXTAREA.textarea(name="text" type="phone" noresize)
+          +e.placeholder Ваше сообщение
+        +e.A.button Отправить
+      +e.close

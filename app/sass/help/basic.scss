@@ -1,0 +1,45 @@
+html, body, div, span, h1, h2, h3, h4, h5, h6, p, em, img, strong, sub, sup, b, u, i, dl, dt, dd, ol, ul, li, fieldset, form, label, table, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, figcaption, figure, footer, header, hgroup, menu, nav, section, summary, time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	outline: 0;
+	vertical-align: baseline;
+	background: transparent;
+}
+
+* {
+	box-sizing: border-box;
+}
+
+html {
+	font-size: 10px;
+}
+
+body {
+	background: #fff;
+	font-size: 1.5rem;
+	line-height: (22/15);
+	color: #363636;
+	font-family: $main;
+}
+
+a {
+	color: $color-main;
+	text-decoration: underline;
+	transition: color .3s ease;
+}
+
+a:hover, a:active, a:focus {
+	color: lighten($color-main, .2);
+	text-decoration: none;
+}
+
+.wrap {
+	width: 1140px;
+	margin: 0 auto;
+}
+
+.wrapper {
+	width: 100%;
+	min-width: 1140px;
+}
