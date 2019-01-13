@@ -21,10 +21,10 @@ module.exports = function(){
           }
         ]
       },
+      mode: 'production',
       externals: {
         jquery: 'jQuery'
       }
     }))
-    .pipe(uglify())
     .pipe(gulp.dest('build/js/'));
 };
