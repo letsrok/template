@@ -1,7 +1,6 @@
-function hello () {
-  const hello = "Hello131233";
-  console.log(hello);
-};
 
+let a = "1adasdasd2";
 
-hello();
+console.log(a);;
+;
+
