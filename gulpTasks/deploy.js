@@ -1,5 +1,5 @@
-let gulp = require('gulp'),
-    ghPages = require('gulp-gh-pages');
+const gulp = require('gulp'),
+      ghPages = require('gulp-gh-pages');
 
 module.exports = function(){
   return gulp.src('build/**/*')

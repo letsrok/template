@@ -1,7 +1,7 @@
 const gulp = require('gulp'),
-    webpack = require('webpack'),
-    uglify = require('gulp-uglify'),
-    webpackStream = require('webpack-stream');
+      webpack = require('webpack'),
+      uglify = require('gulp-uglify'),
+      webpackStream = require('webpack-stream');
 
 module.exports = function(){
   return gulp.src('app/js/libs.js')

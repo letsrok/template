@@ -9,7 +9,8 @@ const scripts = require('./gulpTasks/script'),
 			pug = require('./gulpTasks/pug'),
 			sass = require('./gulpTasks/sass'),
 			webpack = require('./gulpTasks/webpack'),
-      images = require('./gulpTasks/images');
+      images = require('./gulpTasks/images'),
+      libs = require('./gulpTasks/libs');
 
 
 gulp.task('scripts', scripts);
@@ -18,6 +19,7 @@ gulp.task('pug', pug);
 gulp.task('sass', sass);
 gulp.task('webpack', webpack);
 gulp.task('images', images);
+gulp.task('libs', libs);
 
 gulp.task('serve', function() {
     browserSync.init({
@@ -40,13 +42,13 @@ gulp.task('watch', function(){
 	gulp.watch('app/blocks/**/*.pug', gulp.series(pug));
 	gulp.watch('build/*.html', browserSync.reload);
 	gulp.watch('app/js/**/*', gulp.series(scripts));
-  gulp.watch('app/js/libs.js', gulp.series(webpack));
+  gulp.watch('app/js/libs/**/*', gulp.series(libs));
   gulp.watch('app/blocks/**/*.js', gulp.series(scripts));
   gulp.watch('app/images/**/*', gulp.series('delImages', images));
 });
 
 gulp.task('default',gulp.series(
-  sass, pug, scripts, webpack, images,
+  sass, pug, scripts, libs, images,
 	gulp.parallel('serve', 'watch')
 ));
 

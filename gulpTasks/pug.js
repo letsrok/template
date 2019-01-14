@@ -1,7 +1,7 @@
-let gulp = require('gulp'),
-    pug = require('gulp-pug'),
-    filter = require('gulp-filter'),
-    rename = require('gulp-rename');
+const gulp = require('gulp'),
+      pug = require('gulp-pug'),
+      filter = require('gulp-filter'),
+      rename = require('gulp-rename');
 
 module.exports =  function(){
   return gulp.src('app/pages/*.pug')

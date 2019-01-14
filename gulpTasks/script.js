@@ -1,6 +1,6 @@
-let gulp = require('gulp'),
-    jsimport = require('gulp-js-import'),
-    babel = require('gulp-babel');
+const gulp = require('gulp'),
+      jsimport = require('gulp-js-import'),
+      babel = require('gulp-babel');
 
 
  module.exports = function() {
