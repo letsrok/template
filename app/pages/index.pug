@@ -4,10 +4,31 @@ block head
   - var pageTitle = 'BSS70'
 
 block content
-  +article()
-    h1 Hello 123 q12123asdasd!!!
+  .wrap
+    +article()
+      br
+      h1 Hello 123 q12123asdasd!!!
+      ul
+        li Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolore, omnis?
+        li Lorem ipsum dolor sit amet, consectetur adipisicing elit. Pariatur, sunt?
+        li Lorem ipsum dolor sit amet.
+      br
+      ol
+        li Lorem ipsum dolor sit amet, consectetur adipisicing.
+        li Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+        li Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci dolorum praesentium quaerat quos sapiente tenetur?
 
   .wrap
+    br
+    br
     +slider(false, true)
-      +slide()
+      +slide('Lorem ipsum dolor sit amet, consectetur adipisicing.')
         img(src="images/slide.png")
+  .wrap
+    br
+    br
+    +breadcrumbs(['home', 'new'])
+  .wrap
+    +pagination()
+  .wrap
+    +search()

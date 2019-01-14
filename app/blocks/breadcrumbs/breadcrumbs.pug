@@ -1,0 +1,5 @@
+mixin breadcrumbs(list)
+  +b.UL.breadcrumbs&attributes(attributes)
+    for item in list
+      li
+        a(href="/") !{item}

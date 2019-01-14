@@ -56,6 +56,17 @@
 			}
 		}
 	}
+
+	&__title {
+		position: absolute;
+		z-index: 10;
+		left: 20px;
+		bottom: 35px;
+		background-color: $color-main;
+		font-size: 17px;
+		padding: 8px 30px;
+		color: #fff;
+	}
 }
 
 .swiper {

@@ -1,0 +1,45 @@
+.pagination {
+	display: flex;
+	color: #000;
+	text-align: center;
+	font-size: 16px;
+	margin-top: 15px;
+
+	& li {
+		border: 2px solid $color-main;
+		width: 45px;
+		height: 45px;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		color: $color-main;
+		margin-right: 10px;
+		transition: $tr;
+
+		& a  {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			width: 100%;
+			height: 100%;
+			text-decoration: none;
+			transition: $tr;
+		}
+	}
+
+	& > li.active, & > li.selected, & > li:not(.disabled):hover {
+		background-color: $color-main;
+		border-color: $color-main;
+		color: #fff;
+
+		& a {
+			color: #fff;
+		}
+	}
+
+	& li.next,
+	& li.prev {
+		display: none;
+	}
+}
+

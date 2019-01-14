@@ -9,7 +9,8 @@ mixin slider(pagination, buttons)
       +e.button._prev
       +e.button._next
 
-mixin slide()
+mixin slide(title)
   .swiper-slide
     +e.slide&attributes(attributes)
+      .slider__title !{title}
       block

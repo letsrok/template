@@ -1,0 +1,5 @@
+mixin search()
+  +b.site-search&attributes(attributes)
+    +e.FORM.form(action="#").complex-filter
+      +e.INPUT.text(type="search" placeholder="Поиск..." name="cq" id="cq")
+      +e.BUTTON.submit(type="submit") Искать
