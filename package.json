@@ -46,6 +46,7 @@
     "gulp-rename": "^1.4.0",
     "gulp-sass-bulk-import": "^1.0.1",
     "gulp-uglify": "^3.0.1",
+    "jade-get-data": "^1.0.1",
     "normalize.css": "^8.0.0",
     "path": "^0.12.7",
     "postcss-discard-comments": "^4.0.1",

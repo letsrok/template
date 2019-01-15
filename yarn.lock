@@ -5426,6 +5426,11 @@ isurl@^1.0.0-alpha5:
     has-to-string-tag-x "^1.2.0"
     is-object "^1.0.1"
 
+jade-get-data@^1.0.1:
+  version "1.0.1"
+  resolved "https://registry.yarnpkg.com/jade-get-data/-/jade-get-data-1.0.1.tgz#9358f754ee114ff99d79a7d4d85e7c3b1c4fbb64"
+  integrity sha1-k1j3VO4RT/mdeafU2F58OxxPu2Q=
+
 jpegtran-bin@^4.0.0:
   version "4.0.0"
   resolved "https://registry.yarnpkg.com/jpegtran-bin/-/jpegtran-bin-4.0.0.tgz#d00aed809fba7aa6f30817e59eee4ddf198f8f10"

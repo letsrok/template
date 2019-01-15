@@ -3,15 +3,12 @@ const fs = require('fs');
 const path = require('path');
 const { promisify } = require('util');
 
-
-
 const sources = {
   block: require('./templates/block'),
   page: require('./templates/page'),
   scss: require('./templates/scss'),
   js: require('./templates/js'),
 };
-
 
 const dirPath = {
   block: path.resolve('app/blocks'),
@@ -135,7 +132,7 @@ const make = (name, kind, js) => {
       console.log(`The block has just been created in 'app/${kind}s/${name}'`);
       console.log(line);
 
-      // Displays a list of files created
+
       files.forEach(file => console.log(file));
     })
     .then(() => ({ kind, name }));
