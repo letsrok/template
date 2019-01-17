@@ -2,15 +2,25 @@ mixin feedback()
   +b.feedback
     +e.bg
     +e.form-wrap
+      +e.title Запрос звонка
+      +e.info
+        +e.error
+          +e.error-title Ошибка!
+          +e.error-text Не все обязательные поля заполнены
+        +e.load-wrap
+          +e.load
+            +e.load-img
+            +e.load-text Сообщение обрабатывается
+        +e.done Ваше сообщение отправлено! <br> Мы свяжемся с вами в ближайшее время.
       +e.FORM.form(method="post")
-        +e.input-wrap
-          +e.INPUT.input(name="name" type="text")
-          +e.placeholder Ваше имя
-        +e.input-wrap
-          +e.INPUT.input(name="phone" type="phone")
-          +e.placeholder Ваш телефон
-        +e.input-wrap
+        +e.input-wrap._human
+          +e.placeholder Как к вам обращаться
+          +e.INPUT.input._requied(name="name" type="text")
+        +e.input-wrap._phone
+          +e.placeholder Номер телефона
+          +e.INPUT.input._requied(name="phone" type="phone")
+        +e.input-wrap._text
+          +e.placeholder комментраии и пожелания
           +e.TEXTAREA.textarea(name="text" type="phone" noresize)
-          +e.placeholder Ваше сообщение
-        +e.A.button Отправить
-      +e.close
+        +e.A.button.js-feedback-send Отправить
+      +e.close.js__feedback-close

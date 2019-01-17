@@ -1,0 +1,19 @@
+.button {
+  display: inline-block;
+  padding: 10px 15px;
+	color: #fff;
+	text-decoration: none;
+	border-radius: 5px;
+	background-color: $color-main;
+	transition: $tr;
+	border: 1px solid transparent;
+  $b: &;
+
+	&:hover,
+	&:active,
+	&:focus {
+		color: $color-main;
+		background-color: #fff;
+		border-color: $color-main;
+	}
+}
