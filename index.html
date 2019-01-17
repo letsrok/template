@@ -13,6 +13,10 @@
     <script src="js/libs.js"></script>
   </head>
   <body>
+    <div class="wrap"><br><br>
+      <A class="button js__feedback" href="/">Запрос звонка
+      </A>
+    </div>
     <div class="wrap">
       <article class="article"><br>
         <h1>Hello 123 q12123asdasd!!!</h1>
@@ -62,6 +66,48 @@
           <button class="site-search__submit" type="submit">Искать
           </button>
         </form>
+      </div>
+    </div>
+    <div class="feedback">
+      <div class="feedback__bg">
+      </div>
+      <div class="feedback__form-wrap">
+        <div class="feedback__title">Запрос звонка
+        </div>
+        <div class="feedback__info">
+          <div class="feedback__error">
+            <div class="feedback__error-title">Ошибка!
+            </div>
+            <div class="feedback__error-text">Не все обязательные поля заполнены
+            </div>
+          </div>
+          <div class="feedback__load-wrap">
+            <div class="feedback__load">
+              <div class="feedback__load-img">
+              </div>
+              <div class="feedback__load-text">Сообщение обрабатывается
+              </div>
+            </div>
+          </div>
+          <div class="feedback__done">Ваше сообщение отправлено! <br> Мы свяжемся с вами в ближайшее время.
+          </div>
+        </div>
+        <form class="feedback__form" method="post">
+          <div class="feedback__input-wrap feedback__input-wrap_human">
+            <div class="feedback__placeholder">Как к вам обращаться
+            </div><input class="feedback__input feedback__input_requied" name="name" type="text"/>
+          </div>
+          <div class="feedback__input-wrap feedback__input-wrap_phone">
+            <div class="feedback__placeholder">Номер телефона
+            </div><input class="feedback__input feedback__input_requied" name="phone" type="phone"/>
+          </div>
+          <div class="feedback__input-wrap feedback__input-wrap_text">
+            <div class="feedback__placeholder">комментраии и пожелания
+            </div><textarea class="feedback__textarea" name="text" type="phone" noresize="noresize"></textarea>
+          </div><a class="feedback__button js-feedback-send">Отправить</a>
+        </form>
+        <div class="feedback__close js__feedback-close">
+        </div>
       </div>
     </div>
     <script src="js/app.js"></script>
