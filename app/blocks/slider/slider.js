@@ -1,3 +1,5 @@
+// Slider Begin
+
 $(document).ready(function(){
   const slider = new Swiper('.js-slider', {
     loop: true,
@@ -14,3 +16,5 @@ $(document).ready(function(){
     }
   });
 });
+
+// Slider End

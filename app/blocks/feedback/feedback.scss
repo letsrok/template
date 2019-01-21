@@ -34,7 +34,6 @@
 
 		}
 
-
 		&-title {
 			font-size: 17px;
 		}
@@ -110,7 +109,7 @@
 			border-radius: 5px;
 
 			&_close {
-				animation: swal2-hide .6s;
+				animation: swall-show .6s;
 			}
 
 			&_open {
@@ -271,6 +270,20 @@
 	}
 }
 
+@include screen('sm', max){
+	.feedback {
+
+		&__form {
+
+			&-wrap {
+				height: 100%;
+				max-width: 100%;
+				border-radius: 0;
+			}
+		}
+	}
+}
+
 @keyframes small-show {
 	0% {
 		transform: scale(.7);
@@ -289,7 +302,7 @@
 	}
 }
 
-@keyframes swal2-hide {
+@keyframes swall-show {
 	0% {
 		transform: scale(1);
 		opacity: 1;

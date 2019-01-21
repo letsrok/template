@@ -21,6 +21,15 @@ body {
 	line-height: (22/15);
 	color: #363636;
 	font-family: $main;
+
+	&.body_freeze {
+		height: 100%;
+		width: 100%;
+		overflow-y: hidden;
+		position: fixed;
+		left: 0;
+		top: 0;
+	}
 }
 
 a {
@@ -35,7 +44,8 @@ a:hover, a:active, a:focus {
 }
 
 .wrap {
-	width: 1140px;
+	width: 100%;
+	max-width: 1140px;
 	margin: 0 auto;
 }
 

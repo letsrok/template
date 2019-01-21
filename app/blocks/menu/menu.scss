@@ -1,0 +1,139 @@
+.nav {
+  display: flex;
+  justify-content: space-between;
+	background-color: $color-main;
+	width: 100%;
+  
+  $b: &;
+
+	&__ul {
+		display: flex;
+		justify-content: flex-start;
+		align-items: center;
+	}
+
+	&__item {
+		list-style: none;
+		position: relative;
+	}
+
+	&__link {
+		display: block;
+		line-height: 45px;
+		padding: 0 15px;
+		text-decoration: none;
+		text-transform: uppercase;
+		transform: $tr;
+		background-color: $color-main;
+		color: #fff;
+
+		.nav__item:hover > & {
+			background-color: #fff;
+			color: $color-main;
+		}
+	}
+
+	&__drop,
+	&__sub {
+		display: none;
+		position: absolute;
+	}
+
+	&__drop {
+		top: 45px;
+		left: 0;
+		background-color: $color-main;
+		width: 250px;
+		z-index: 2;
+	}
+
+	&__sub {
+		left: 100%;
+		top: 0;
+		width: 250px;
+		background-color: $color-main;
+		z-index: 3;
+	}
+
+	&__link_drop {
+		background-color: $color-main;
+	}
+}
+
+.menu {
+	display: flex;
+
+	@include screen('md', max) {
+		justify-content: flex-end;
+		align-items: center;
+		background-color: $color-main;
+	}
+}
+
+@include screen('md', max) {
+
+	.nav {
+		position: fixed;
+		z-index: 999;
+		left: -100%;
+		top: 0;
+		width: 100%;
+		height: 100%;
+		background-color: $color-main;
+		transition: $tr;
+		justify-content: center;
+		align-items: center;
+
+		&_active {
+			left: 0;
+			transition: $tr;
+		}
+
+		&__ul {
+			width: 100%;
+			flex-direction: column;
+		}
+
+		&__item {
+			width: 100%;
+			text-align: center;
+
+			&_parent {
+
+				>.nav__link {
+
+					&::after {
+						content: '';
+						display: inline-block;
+						vertical-align: middle;
+						position: relative;
+						left: 30px;
+						width: 0;
+						height: 0;
+						border-top: 8px solid transparent;
+						border-bottom: 8px solid transparent;
+						border-left: 10px solid #fff;
+						z-index: 3;
+						transition: $tr;
+					}
+				}
+
+				&:hover {
+
+					>.nav__link {
+
+						&::after {
+							border-left-color: $color-main;
+						}
+					}
+				}
+			}
+		}
+
+		&__link {
+			line-height: normal;
+			padding: 10px 30px;
+			font-size: 20px;
+		}
+	}
+}

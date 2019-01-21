@@ -1,13 +1,16 @@
+// Feedback Begin
+
 $(document).on('click', '.js__feedback', function(){
   $('.feedback').addClass('feedback_open');
   $('.feedback__form-wrap').removeClass('feedback__form-wrap_close').addClass('feedback__form-wrap_open');
+  $('body').addClass('body_freeze');
   return false;
 });
 
 $(document).on('click', '.js__feedback-close, .feedback__bg', function(){
   $('.feedback__form-wrap').addClass('feedback__form-wrap_close').removeClass('feedback__form-wrap_open');
   setTimeout(function(){$('.feedback').removeClass('feedback_open')}, 500);
-
+  $('body').removeClass('body_freeze');
   return false;
 });
 
@@ -15,8 +18,13 @@ $('.feedback__input_requied').on('change', function () {
   verifyForm($(this));
 });
 
+$('.feedback__input[type="phone"]').on('keyup', function () {
+  $(this).val($(this).val().replace (/\D/, ''));
+});
+
 function verifyForm (target){
   let value = target.val().trim().length;
+
   if(value < 1) {
     target.addClass('feedback__input_error');
     target.prev('.feedback__placeholder').addClass('feedback__placeholder_error');
@@ -26,7 +34,6 @@ function verifyForm (target){
     target.prev('.feedback__placeholder').removeClass('feedback__placeholder_error');
     return 1;
   }
-
 };
 
 $('.js-feedback-send').on('click', function(){
@@ -54,3 +61,5 @@ $('.js-feedback-send').on('click', function(){
   }
 
 });
+
+// Feedback End
