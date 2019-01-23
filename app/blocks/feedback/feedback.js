@@ -34,7 +34,7 @@ function verifyForm (target){
     target.prev('.feedback__placeholder').removeClass('feedback__placeholder_error');
     return 1;
   }
-};
+}
 
 $('.js-feedback-send').on('click', function(){
 
@@ -59,7 +59,6 @@ $('.js-feedback-send').on('click', function(){
       $('.feedback__load-wrap').fadeIn(500);
     }
   }
-
 });
 
 // Feedback End

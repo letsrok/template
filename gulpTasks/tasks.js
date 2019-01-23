@@ -5,6 +5,5 @@ module.exports = [
   './gulpTasks/pug.js',
   './gulpTasks/sass.js',
   './gulpTasks/script.js',
-  './gulpTasks/webpack.js',
   './gulpTasks/watch.js'
 ];
