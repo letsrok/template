@@ -57,24 +57,6 @@ $('.js-feedback-send').on('click', function () {
     }
   }
 }); // Feedback End
-// Slider Begin
-
-$(document).ready(function () {
-  var slider = new Swiper('.js-slider', {
-    loop: true,
-    slidesPerView: 1,
-    centeredSlides: true,
-    centerInsufficientSlides: true,
-    autoplay: {
-      delay: 8000,
-      disableOnInteraction: false
-    },
-    navigation: {
-      nextEl: '.slider__button_next',
-      prevEl: '.slider__button_prev'
-    }
-  });
-}); // Slider End
 // Menu Begin
 
 var point = 800,
@@ -90,26 +72,30 @@ $('.nav__item').hover(function () {
   var ww = $(window).width();
 
   if (ww >= point) {
-    $(this).children('.nav__drop').stop().show(animDuratoion);
+    //$(this).children('.nav__drop').stop().show(animDuratoion);
+    $(this).children('.nav__drop').addClass('nav__drop_desktop-active');
   }
 }, function () {
   var ww = $(window).width();
 
   if (ww >= point) {
-    $(this).children('.nav__drop').stop().hide(animDuratoion);
+    //$(this).children('.nav__drop').stop().hide(animDuratoion);
+    $(this).children('.nav__drop').removeClass('nav__drop_desktop-active');
   }
 });
 $('.nav__item_drop').hover(function () {
   var ww = $(window).width();
 
   if (ww >= point) {
-    $(this).children('.nav__sub').stop().show(animDuratoion);
+    //$(this).children('.nav__sub').stop().show(animDuratoion);
+    $(this).children('.nav__sub').addClass('nav__sub_desktop-active');
   }
 }, function () {
   var ww = $(window).width();
 
   if (ww >= point) {
-    $(this).children('.nav__sub').stop().hide(animDuratoion);
+    //$(this).children('.nav__sub').stop().hide(animDuratoion);
+    $(this).children('.nav__sub').removeClass('nav__sub_desktop-active');
   }
 });
 $('.nav__link').on('click', function (e) {
@@ -140,3 +126,21 @@ $('.burger').on('click', function () {
   $('.burger').toggleClass('burger_active');
   $('body').toggleClass('body_freeze');
 }); // Menu End
+// Slider Begin
+
+$(document).ready(function () {
+  var slider = new Swiper('.js-slider', {
+    loop: true,
+    slidesPerView: 1,
+    centeredSlides: true,
+    centerInsufficientSlides: true,
+    autoplay: {
+      delay: 8000,
+      disableOnInteraction: false
+    },
+    navigation: {
+      nextEl: '.slider__button_next',
+      prevEl: '.slider__button_prev'
+    }
+  });
+}); // Slider End
