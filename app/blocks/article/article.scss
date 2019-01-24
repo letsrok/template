@@ -1,7 +1,6 @@
 .article {
-	width: calc(100% - 280px);
-	position: relative;
-	top: -10px;
+	width: 100%;
+	min-height: 450px;
 
 	ul,
 	ol{

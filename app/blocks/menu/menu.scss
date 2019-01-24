@@ -43,6 +43,7 @@
 
 	&__item {
 		list-style: none;
+		position: relative;
 	}
 
 	&__link {
@@ -61,12 +62,6 @@
 		}
 	}
 
-	&__drop,
-	&__sub {
-		display: none;
-		position: absolute;
-	}
-
 	&__drop {
 		top: 45px;
 		left: 0;
@@ -81,6 +76,17 @@
 		width: 250px;
 		background-color: $color-main;
 		z-index: 3;
+	}
+
+	&__drop,
+	&__sub {
+		display: none;
+		position: absolute;
+
+		&_desktop-active {
+			display: block;
+			z-index: 50;
+		}
 	}
 
 	&__link_drop {
@@ -128,6 +134,7 @@
 		&__item {
 			width: 100%;
 			text-align: center;
+			position: static;
 
 			&_parent {
 
@@ -186,14 +193,14 @@
 			&_active {
 				opacity: 1;
 				pointer-events: all;
-				z-index: 5;
+				z-index: 50;
 			}
 		}
 
 		&__sub {
 
 			&_active {
-				z-index: 10;
+				z-index: 60;
 			}
 		}
 

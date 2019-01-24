@@ -1,0 +1,36 @@
+.scroll-top {
+  display: none;
+	cursor: pointer;
+  width: 63px;
+  height: 63px;
+  position: fixed;
+  bottom: 25px;
+  right: 25px;
+  z-index: 100;
+  background-color: $color-main;
+  transition: $tr;
+
+  &::before {
+    content: '';
+    position: absolute;
+    width: 25px;
+    height: 25px;
+    top: 61%;
+    left: 50%;
+    border-top: 2px solid #fff;
+    border-left: 2px solid #fff;
+    transform: translate(-50%, -50%) rotate(45deg);
+    transition: $tr;
+  }
+
+  &:hover {
+    background-color: #fff;
+
+    &::before {
+      border-left-color: $color-main;
+      border-top-color: $color-main;
+    }
+  }
+  
+  $b: &;
+}

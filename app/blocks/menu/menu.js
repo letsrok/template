@@ -1,4 +1,4 @@
-// Menu Begin
+/* Menu Begin */
 
 const point = 800,
       animDuratoion = 250;
@@ -15,13 +15,13 @@ $('.nav__item').hover(
   function () {
     let ww = $(window).width();
     if( ww >= point) {
-      $(this).children('.nav__drop').stop().show(animDuratoion);
+			$(this).children('.nav__drop').addClass('nav__drop_desktop-active');
     }
   },
   function () {
 		let ww = $(window).width();
 		if( ww >= point) {
-			$(this).children('.nav__drop').stop().hide(animDuratoion);
+			$(this).children('.nav__drop').removeClass('nav__drop_desktop-active');
 		}
   }
 );
@@ -30,13 +30,13 @@ $('.nav__item_drop').hover(
   function () {
     let ww = $(window).width();
     if( ww >= point) {
-      $(this).children('.nav__sub').stop().show(animDuratoion);
+			$(this).children('.nav__sub').addClass('nav__sub_desktop-active');
     }
   },
   function () {
 		let ww = $(window).width();
 		if( ww >= point) {
-			$(this).children('.nav__sub').stop().hide(animDuratoion);
+			$(this).children('.nav__sub').removeClass('nav__sub_desktop-active');
 		}
   }
 );
@@ -47,8 +47,8 @@ $('.nav__link').on('click', function(e){
 		e.preventDefault();
 		if( $(this).next('ul').hasClass('nav__drop')){
 			$(this).next('ul').addClass('nav__drop_active');
-			$('.nav__prev').addClass('nav__prev_active');
-			$('.nav__prev').fadeIn(animDuratoion)
+			$('.nav__prev').addClass('nav__prev_active')
+											.fadeIn(animDuratoion);
 		} else if ($(this).next('ul').hasClass('nav__sub')){
 			$(this).next('ul').addClass('nav__sub_active');
 		}
@@ -71,5 +71,12 @@ $('.burger').on('click', () => {
   $('body').toggleClass('body_freeze');
 });
 
+$(window).on('resize', () => {
+	if( $(window).width() >= point ) {
+		$('body').removeClass('body_freeze');
+		$('.nav').removeClass('nav_active');
+		$('.burger').removeClass('burger_active');
+	}
+})
 
-// Menu End
+/* Menu End */
