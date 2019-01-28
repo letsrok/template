@@ -7,7 +7,9 @@ block content
   .wrap
     br
     br
-    +button("/").js__feedback Запрос звонка
+    +button("/").js-popup(data-popup = 'popup-feedback') Запрос звонка
+
+    +button("/").js-popup(data-popup = 'popup-sample') Второй попап
   .wrap
     br
     br
@@ -42,6 +44,10 @@ block content
     +pagination()
   .wrap
     +search()
-  +feedback()
+  +popups()
+    +popup.popup-feedback
+      +feedback()
+    +popup.popup-sample
+      h1 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deserunt, sunt?
 
   +scrolltop()

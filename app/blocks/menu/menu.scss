@@ -80,11 +80,14 @@
 
 	&__drop,
 	&__sub {
-		display: none;
+		opacity: 0;
+		pointer-events: none;
 		position: absolute;
+		transition: $tr;
 
 		&_desktop-active {
-			display: block;
+			opacity: 1;
+			pointer-events: all;
 			z-index: 50;
 		}
 	}

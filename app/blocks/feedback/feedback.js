@@ -1,18 +1,5 @@
 // Feedback Begin
 
-$(document).on('click', '.js__feedback', function(){
-  $('.feedback').addClass('feedback_open');
-  $('.feedback__form-wrap').removeClass('feedback__form-wrap_close').addClass('feedback__form-wrap_open');
-  $('body').addClass('body_freeze');
-  return false;
-});
-
-$(document).on('click', '.js__feedback-close, .feedback__bg', function(){
-  $('.feedback__form-wrap').addClass('feedback__form-wrap_close').removeClass('feedback__form-wrap_open');
-  setTimeout(function(){$('.feedback').removeClass('feedback_open')}, 500);
-  $('body').removeClass('body_freeze');
-  return false;
-});
 
 $('.feedback__input_requied').on('change', function () {
   verifyForm($(this));

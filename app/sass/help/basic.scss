@@ -24,6 +24,8 @@ body {
 
 	&.body_freeze {
 		height: 100%;
+		width: 100%;
+		padding-right: 15px;
 		overflow-y: hidden;
 		position: fixed;
 		left: 0;
