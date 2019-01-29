@@ -29,7 +29,31 @@ block content
         li Lorem ipsum dolor sit amet, consectetur adipisicing.
         li Lorem ipsum dolor sit amet, consectetur adipisicing elit.
         li Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci dolorum praesentium quaerat quos sapiente tenetur?
-
+  .wrap
+    br
+    br
+    +tabs('news')
+      +tab()._active Категория 1
+      +tab() Категория 2
+      +tab() Категория 3
+      +tab() Категория 4
+    br
+    br
+    +tabs-wrapper('news')
+      +tab-content()._active
+        p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium eum, facilis fuga incidunt nobis placeat?
+      +tab-content()
+        p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci iure maiores nam odio. Aut cum dicta distinctio dolores dolorum eius eligendi ipsum iure nam rem.
+      +tab-content()
+        h2 Lorem ipsum dolor sit amet.
+      +tab-content()
+        ul
+          li Lorem ipsum dolor.
+          li Lorem ipsum dolor sit.
+          li Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid dolor dolore eveniet iusto, minima minus nam repellendus sapiente?
+          li Lorem ipsum dolor.
+          li Lorem ipsum dolor sit.
+          li Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid dolor dolore eveniet iusto, minima minus nam repellendus sapiente?
   .wrap
     br
     br
@@ -44,6 +68,10 @@ block content
     +pagination()
   .wrap
     +search()
+
+
+
+
   +popups()
     +popup.popup-feedback
       +feedback()

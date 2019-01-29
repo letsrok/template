@@ -1,0 +1,46 @@
+.tabs {
+  display: flex;
+  justify-content: flex-start;
+	align-items: center;
+  
+  $b: &;
+
+	&__tab {
+		list-style: none;
+		cursor: pointer;
+		padding: 10px 15px 8px 15px;
+		border-bottom: 2px solid transparent;
+		display: block;
+		color: $color-basic;
+		transition: $tr;
+
+		&:hover,
+		&_active {
+			color: $color-main;
+			border-bottom: 2px solid $color-main;
+		}
+	}
+
+	&__wrapper {
+		margin-top: 25px;
+	}
+
+	&__content {
+		visibility: hidden;
+		opacity: 0;
+		transition: $tr;
+		transform: translate3d(0, 10px, 0);
+		height: 0;
+
+		&_active {
+			visibility: visible;
+			opacity: 1;
+			transform: translate3d(0, 0, 0);
+			height: auto;
+		}
+	}
+}
+
+
+
+

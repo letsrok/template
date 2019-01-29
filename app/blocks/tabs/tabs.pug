@@ -1,0 +1,15 @@
+mixin tabs(target)
+  +b.UL(data-tabs=target).tabs&attributes(attributes)
+    block
+
+mixin tab
+  +e.LI.tab&attributes(attributes)
+    block
+
+mixin tabs-wrapper(target)
+  +b.tabs__wrapper(data-tab=target)&attributes(attributes)
+    block
+
+mixin tab-content()
+  +b.tabs__content&attributes(attributes)
+    block
