@@ -1,4 +1,9 @@
-<!DOCTYPE html>
+
+<!-- Tabs - Обертка для табов-->
+<!-- tab - табы для селекта-->
+<!-- tabs-wrapper - обертка для контента табов-->
+<!-- tab-content - обортка для контента внутри таба-->
+<!-- target - указываем для tabs И tabs-wrapper для связки--><!DOCTYPE html>
 <html lang="ru">
   <head>
     <meta charset="utf-8">
@@ -13,13 +18,15 @@
     <script src="js/libs.js"></script>
   </head>
   <body>
-    <div class="wrap"><br><br>
+    <div class="wrap"><br>
+      <h2><em>Попапы</em></h2><br>
       <A class="button js-popup" href="/" data-popup="popup-feedback">Запрос звонка
       </A>
       <A class="button js-popup" href="/" data-popup="popup-sample">Второй попап
       </A>
     </div>
-    <div class="wrap"><br><br>
+    <div class="wrap"><br>
+      <h2><em>Меню</em></h2><br>
       <div class="menu">
         <nav class="nav">
           <div class="nav__prev">Назад
@@ -69,7 +76,8 @@
         </div>
       </div>
     </div>
-    <div class="wrap">
+    <div class="wrap"><br>
+      <h2><em>Контентная зона</em></h2><br>
       <article class="article"><br>
         <h1>Hello 123 q12123asdasd!!!</h1>
         <ul>
@@ -84,7 +92,70 @@
         </ol>
       </article>
     </div>
-    <div class="wrap"><br><br>
+    <div class="wrap"><br>
+      <h2><em>Табы</em></h2><br>
+      <ul class="tabs" data-tabs="news">
+        <li class="tabs__tab tabs__tab_active">Категория 1
+        </li>
+        <li class="tabs__tab">Категория 2
+        </li>
+        <li class="tabs__tab">Категория 3
+        </li>
+        <li class="tabs__tab">Категория 4
+        </li>
+      </ul><br><br>
+      <div class="tabs__wrapper" data-tab="news">
+        <div class="tabs__content tabs__content_active">
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium eum, facilis fuga incidunt nobis placeat?</p>
+        </div>
+        <div class="tabs__content">
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci iure maiores nam odio. Aut cum dicta distinctio dolores dolorum eius eligendi ipsum iure nam rem.</p>
+        </div>
+        <div class="tabs__content">
+          <h2>Lorem ipsum dolor sit amet.</h2>
+        </div>
+        <div class="tabs__content">
+          <ul>
+            <li>Lorem ipsum dolor.</li>
+            <li>Lorem ipsum dolor sit.</li>
+            <li>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid dolor dolore eveniet iusto, minima minus nam repellendus sapiente?</li>
+            <li>Lorem ipsum dolor.</li>
+            <li>Lorem ipsum dolor sit.</li>
+            <li>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid dolor dolore eveniet iusto, minima minus nam repellendus sapiente?</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="wrap"><br>
+      <h2><em>Табы с фильтрами</em></h2><br>
+      <ul class="tabs-filters" data-tabs="article">
+        <li class="tabs-filters__tab tabs-filters__tab_active" data-tab-filter="article-all">Все новости
+        </li>
+        <li class="tabs-filters__tab" data-tab-filter="article-popular">Популярные
+        </li>
+        <li class="tabs-filters__tab" data-tab-filter="article-last">Последние
+        </li>
+      </ul>
+      <div class="tabs-filters__wrapper" data-tab="article">
+        <div class="tabs-filters__content article-all article-last">
+          <h3>Новость 1, последние новости</h3>
+        </div>
+        <div class="tabs-filters__content article-all article-last">
+          <h3>Новость 2, последние новости</h3>
+        </div>
+        <div class="tabs-filters__content article-all">
+          <h3>Новость 3, просто новость</h3>
+        </div>
+        <div class="tabs-filters__content article-all article-popular">
+          <h3>Новость 4, популярная новость</h3>
+        </div>
+        <div class="tabs-filters__content article-all article-popular">
+          <h3>Новость 5, популярная новость</h3>
+        </div>
+      </div>
+    </div>
+    <div class="wrap"><br>
+      <h2><em>Слайдер</em></h2><br>
       <div class="slider swiper-container js-slider">
         <div class="swiper-wrapper">
           <div class="swiper-slide">
@@ -99,20 +170,23 @@
         </div>
       </div>
     </div>
-    <div class="wrap"><br><br>
+    <div class="wrap"><br>
+      <h2><em>Хлебные крошки</em></h2><br>
       <ul class="breadcrumbs">
         <li><a href="/">home</a></li>
         <li><a href="/">new</a></li>
       </ul>
     </div>
-    <div class="wrap">
+    <div class="wrap"><br>
+      <h2><em>Пагинация</em></h2><br>
       <ul class="pagination">
         <li class="page"><a href="/">1</a></li>
         <li class="page selected"><a href="/">2</a></li>
         <li class="page"><a href="/">3</a></li>
       </ul>
     </div>
-    <div class="wrap">
+    <div class="wrap"><br>
+      <h2><em>Форма поиска</em></h2>
       <div class="site-search">
         <form class="site-search__form complex-filter" action="#"><input class="site-search__text" type="search" placeholder="Поиск..." name="cq" id="cq"/>
           <button class="site-search__submit" type="submit">Искать
