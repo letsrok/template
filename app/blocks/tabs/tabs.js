@@ -20,7 +20,6 @@ $('.tabs-filters__tab').on('click', function(){
 		$(this).addClass('tabs-filters__tab_active')
 			.siblings().removeClass('tabs-filters__tab_active');
 
-		//tabTarget.children().addClass('tabs-filters__content_hidden');
 	tabTarget.children().not(`.${tabFilter}`).fadeOut(300);
 
 		setTimeout(function () {

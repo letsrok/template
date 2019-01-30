@@ -44,6 +44,42 @@ $('.js-feedback-send').on('click', function () {
   }
 }); // Feedback End
 
+/*Form Begin*/
+
+$('.js-datepicker').each(function () {
+  var el = $(this);
+  el.datepicker();
+});
+
+if ($('.js-select').length) {
+  var choices = new Choices('.js-select', {
+    searchEnabled: false,
+    itemSelectText: ''
+  });
+}
+
+$(document).on('click', '.js-numberbox-minus, .js-numberbox-plus', function (e) {
+  e.preventDefault();
+  var input = $(this).parent().find('.js-numberbox-input');
+  var val = +input.val();
+  var minus = $(this).attr('class').includes('minus') || false;
+
+  if (!val.length) {
+    input.val(1);
+  }
+
+  if (minus) {
+    input.val(val > 0 ? val -= 1 : 0);
+  } else {
+    input.val(val += 1);
+  }
+});
+$(document).on('keyup change', '.js-numberbox-input', function () {
+  this.value = this.value.replace(/[^\d]/, '');
+  if ($(this).val() < 0) $(this).val(0);
+});
+/*Form End*/
+
 /* Menu Begin */
 
 var point = 800,
@@ -187,8 +223,7 @@ $('.tabs-filters__tab').on('click', function () {
   var tabParent = $(this).parent('ul').attr('data-tabs'),
       tabFilter = $(this).attr('data-tab-filter'),
       tabTarget = $(document).find('[data-tab="' + tabParent + '"]');
-  $(this).addClass('tabs-filters__tab_active').siblings().removeClass('tabs-filters__tab_active'); //tabTarget.children().addClass('tabs-filters__content_hidden');
-
+  $(this).addClass('tabs-filters__tab_active').siblings().removeClass('tabs-filters__tab_active');
   tabTarget.children().not(".".concat(tabFilter)).fadeOut(300);
   setTimeout(function () {
     tabTarget.children(".".concat(tabFilter)).fadeIn(300);

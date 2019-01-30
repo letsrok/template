@@ -160,7 +160,7 @@
         <div class="swiper-wrapper">
           <div class="swiper-slide">
             <div class="slider__slide">
-              <div class="slider__title">Lorem ipsum dolor sit amet, consectetur adipisicing.</div><img src="images/slide.png">
+              <div class="slider__title">Lorem ipsum dolor sit amet, consectetur adipisicing.</div><img src="https://via.placeholder.com/1140x300">
             </div>
           </div>
         </div>
@@ -174,6 +174,7 @@
       <h2><em>Хлебные крошки</em></h2><br>
       <ul class="breadcrumbs">
         <li><a href="/">home</a></li>
+        <li><a href="/">news</a></li>
         <li><a href="/">new</a></li>
       </ul>
     </div>
@@ -194,6 +195,41 @@
         </form>
       </div>
     </div>
+    <div class="wrap"><br>
+      <h2>Элементы форм</h2><br>
+      <form class="form" action="#" method="post">
+        <div class="inputbox">
+          <input class="input" placeholder="Надпись"/>
+        </div><br>
+        <textarea class="textarea" placeholder="Текстовое поле"></textarea><br>
+        <div class="inputbox">
+          <input class="input js-datepicker" placeholder="Выберите дату" readonly="readonly"/>
+        </div><br>
+        <div class="inputbox">
+          <select class="select js-select">
+            <option value="Опция 1">Опция 1</option>
+            <option value="Опция 2">Опция 2</option>
+            <option value="Опция 3">Опция 3</option>
+          </select>
+        </div><br>
+        <div class="inputbox">
+          <label class="checkradio"><input class="checkradio__input" name="checkbox" value="test" check="check" type="checkbox"/><span class="checkradio__box"></span><span class="checkradio__content">Чекбокс</span>
+          </label>
+        </div><br>
+        <div class="inputbox">
+          <label class="checkradio"><input class="checkradio__input" name="ui-radio" value="test" checked="true" type="radio"/><span class="checkradio__box"></span><span class="checkradio__content">Радиокнопка</span>
+          </label>
+          <label class="checkradio"><input class="checkradio__input" name="ui-radio" value="test-2" type="radio"/><span class="checkradio__box"></span><span class="checkradio__content">Радиокнопка</span>
+          </label>
+        </div><br>
+        <div class="inputbox">
+          <div class="input-numberbox"><span class="input-numberbox__button js-numberbox-minus"></span>
+            <input class="input input-numberbox__input js-numberbox-input" placeholder="Выберите количество"/><span class="input-numberbox__button js-numberbox-plus"></span>
+          </div>
+        </div>
+      </form>
+    </div>
+    <div class="wrap"><br><br><br><br><br><br><br><br><br></div>
     <div class="popups">
       <div class="popups__overlay">
       </div>

@@ -86,12 +86,13 @@ block content
     br
     +slider(false, true)
       +slide('Lorem ipsum dolor sit amet, consectetur adipisicing.')
-        img(src="images/slide.png")
+        img(src="https://via.placeholder.com/1140x300")
+
   .wrap
     br
     h2 <em>Хлебные крошки</em>
     br
-    +breadcrumbs(['home', 'new'])
+    +breadcrumbs(['home', 'news', 'new'])
   .wrap
     br
     h2 <em>Пагинация</em>
@@ -101,7 +102,44 @@ block content
     br
     h2 <em>Форма поиска</em>
     +search()
-
+  .wrap
+    br
+    h2 Элементы форм
+    br
+    +form('#', 'post')
+      +inputbox()
+        +input(placeholder="Надпись")
+      br
+      +textarea(placeholder="Текстовое поле")
+      br
+      +inputbox()
+        +input()(placeholder="Выберите дату" readonly).js-datepicker
+      br
+      +inputbox()
+        +select()
+          option(value="Опция 1") Опция 1
+          option(value="Опция 2") Опция 2
+          option(value="Опция 3") Опция 3
+      br
+      +inputbox()
+        +checkbox('checkbox', 'test', 'true') Чекбокс
+      br
+      +inputbox()
+        +radio('ui-radio', 'test', 'true') Радиокнопка
+        +radio('ui-radio', 'test-2') Радиокнопка
+      br
+      +inputbox()
+        +input-number()(placeholder="Выберите количество")
+  .wrap
+    br
+    br
+    br
+    br
+    br
+    br
+    br
+    br
+    br
 
 
 
