@@ -6,17 +6,22 @@ block head
 block content
   .wrap
     br
+    h2 <em>Попапы</em>
     br
     +button("/").js-popup(data-popup = 'popup-feedback') Запрос звонка
 
     +button("/").js-popup(data-popup = 'popup-sample') Второй попап
   .wrap
     br
+    h2 <em>Меню</em>
     br
     .menu
       +menu()
       +burger()
   .wrap
+    br
+    h2 <em>Контентная зона</em>
+    br
     +article()
       br
       h1 Hello 123 q12123asdasd!!!
@@ -31,6 +36,7 @@ block content
         li Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci dolorum praesentium quaerat quos sapiente tenetur?
   .wrap
     br
+    h2 <em>Табы</em>
     br
     +tabs('news')
       +tab()._active Категория 1
@@ -56,17 +62,44 @@ block content
           li Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid dolor dolore eveniet iusto, minima minus nam repellendus sapiente?
   .wrap
     br
+    h2 <em>Табы с фильтрами</em>
+    br
+    +tabs-filters('article')
+      +tab-filter('article-all')._active Все новости
+      +tab-filter('article-popular') Популярные
+      +tab-filter('article-last') Последние
+    +tabs-filters-wrapper('article')
+      +tab-filters-content().article-all.article-last
+        h3 Новость 1, последние новости
+      +tab-filters-content().article-all.article-last
+        h3 Новость 2, последние новости
+      +tab-filters-content().article-all
+        h3 Новость 3, просто новость
+      +tab-filters-content().article-all.article-popular
+        h3 Новость 4, популярная новость
+      +tab-filters-content().article-all.article-popular
+        h3 Новость 5, популярная новость
+
+  .wrap
+    br
+    h2 <em>Слайдер</em>
     br
     +slider(false, true)
       +slide('Lorem ipsum dolor sit amet, consectetur adipisicing.')
         img(src="images/slide.png")
   .wrap
     br
+    h2 <em>Хлебные крошки</em>
     br
     +breadcrumbs(['home', 'new'])
   .wrap
+    br
+    h2 <em>Пагинация</em>
+    br
     +pagination()
   .wrap
+    br
+    h2 <em>Форма поиска</em>
     +search()
 
 

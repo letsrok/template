@@ -12,4 +12,20 @@ $('.tabs__tab').on('click', function() {
 	tabTarget.children().eq(tabNumber).addClass('tabs__content_active');
 });
 
+$('.tabs-filters__tab').on('click', function(){
+	let tabParent = $(this).parent('ul').attr('data-tabs'),
+		tabFilter = $(this).attr('data-tab-filter'),
+		tabTarget = $(document).find('[data-tab="' + tabParent + '"]');
+
+		$(this).addClass('tabs-filters__tab_active')
+			.siblings().removeClass('tabs-filters__tab_active');
+
+		//tabTarget.children().addClass('tabs-filters__content_hidden');
+	tabTarget.children().not(`.${tabFilter}`).fadeOut(300);
+
+		setTimeout(function () {
+			tabTarget.children(`.${tabFilter}`).fadeIn(300);
+		}, 300)
+});
+
 /*Tabs End*/

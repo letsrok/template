@@ -1,3 +1,9 @@
+// Tabs - Обертка для табов
+// tab - табы для селекта
+// tabs-wrapper - обертка для контента табов
+// tab-content - обортка для контента внутри таба
+// target - указываем для tabs И tabs-wrapper для связки
+
 mixin tabs(target)
   +b.UL(data-tabs=target).tabs&attributes(attributes)
     block
@@ -12,4 +18,22 @@ mixin tabs-wrapper(target)
 
 mixin tab-content()
   +b.tabs__content&attributes(attributes)
+    block
+
+
+
+mixin tabs-filters(target)
+  +b.UL(data-tabs=target).tabs-filters&attributes(attributes)
+    block
+
+mixin tab-filter(filter)
+  +e.LI(data-tab-filter=filter).tab&attributes(attributes)
+    block
+
+mixin tabs-filters-wrapper(target)
+  +b.tabs-filters__wrapper(data-tab=target)&attributes(attributes)
+    block
+
+mixin tab-filters-content()
+  +b.tabs-filters__content&attributes(attributes)
     block

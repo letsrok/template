@@ -41,6 +41,45 @@
 	}
 }
 
+.tabs-filters {
+	display: flex;
+	justify-content: flex-start;
+	align-items: center;
+
+	&__tab {
+		list-style: none;
+		cursor: pointer;
+		padding: 10px 15px 8px 15px;
+		border-bottom: 2px solid transparent;
+		display: block;
+		color: $color-basic;
+		transition: $tr;
+
+		&:hover,
+		&_active {
+			color: $color-main;
+			border-bottom: 2px solid $color-main;
+		}
+	}
+
+	&__wrapper {
+		margin-top: 25px;
+	}
+
+	&__content {
+		visibility: visible;
+		opacity: 1;
+		height: auto;
+
+		&_hidden {
+			visibility: hidden;
+			opacity: 0;
+			transition: $tr;
+			height: 0;
+		}
+	}
+}
+
 
 
 
