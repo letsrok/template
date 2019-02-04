@@ -1,0 +1,52 @@
+.accordion {
+
+	border-bottom: 1px solid $color-border;
+
+	$b: &;
+
+	.accordions & {
+		margin-top: -1px;
+	}
+
+	&__header {
+		position: relative;
+		padding: 10px 10px;
+		width: 100%;
+		line-height: 38px;
+		cursor: pointer;
+
+		&::after {
+			content: '';
+			position: absolute;
+			top: 50%;
+			right: 10px;
+			width: 10px;
+			height: 10px;
+			border-width: 1px 1px 0 0;
+			border-style: solid;
+			border-color: $color-basic;
+			transform-origin: center;
+			transform: translateY(-50%) rotate(135deg);
+			transition: $tr;
+
+			#{$b}.is-active & {
+				transform: translateY(-50%) rotate(-45deg);
+				margin-top: 2px;
+			}
+		}
+	}
+
+	&__body {
+		padding: 0 50px 48px 40px;
+		width: 100%;
+		display: none;
+
+		#{$b}.is-active & {
+			display: block;
+		}
+	}
+
+	.accordions {
+		padding-top: 1px;
+	}
+}

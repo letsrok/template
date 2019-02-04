@@ -104,7 +104,7 @@ block content
     +search()
   .wrap
     br
-    h2 Элементы форм
+    h2 <em>Элементы форм</em>
     br
     +form('#', 'post')
       +inputbox()
@@ -130,6 +130,22 @@ block content
       br
       +inputbox()
         +input-number()(placeholder="Выберите количество")
+  .wrap
+    br
+    h2 <em>Аккордион</em>
+    br
+    +accordions()
+      +accordion().is-active
+        +accordion-header Первый
+        +accordion-body Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium, aliquid aut corporis cumque eaque error et eum expedita illum maiores necessitatibus quam quibusdam reiciendis sunt?
+      +accordion()
+        +accordion-header() Второй
+        +accordion-body() Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facere ipsum itaque non quo repudiandae, soluta!
+      +accordion()
+        +accordion-header() Третий
+        +accordion-body() Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facere ipsum itaque non quo repudiandae, soluta!
+
+
   .wrap
     br
     br
