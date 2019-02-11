@@ -2,12 +2,10 @@
 
 $(document).ready(function(){
   const slider = new Swiper('.js-slider', {
-    loop: true,
     slidesPerView: 1,
     centeredSlides: true,
-    centerInsufficientSlides: true,
     autoplay: {
-      delay: 8000,
+      delay: 7500,
       disableOnInteraction: false,
     },
     navigation: {
