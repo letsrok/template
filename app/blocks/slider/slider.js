@@ -1,7 +1,7 @@
 // Slider Begin
 
 $(document).ready(function(){
-  const slider = new Swiper('.js-slider', {
+  const slider = new Swiper('.slider-example', {
     slidesPerView: 1,
     centeredSlides: true,
     autoplay: {

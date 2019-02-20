@@ -216,7 +216,7 @@ $('.scroll-top').on('click', function () {
 // Slider Begin
 
 $(document).ready(function () {
-  var slider = new Swiper('.js-slider', {
+  var slider = new Swiper('.slider-example', {
     slidesPerView: 1,
     centeredSlides: true,
     autoplay: {
