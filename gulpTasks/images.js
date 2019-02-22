@@ -17,5 +17,4 @@ module.exports = function() {
   $.gulp.task('delImages', () => {
     return del('build/images');
   });
-
 };
