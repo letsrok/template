@@ -2,7 +2,7 @@
 
 
 $('.feedback__input_requied').on('change', function () {
-  verifyForm($(this));
+ verifyForm($(this));
 });
 
 $('.feedback__input[type="phone"]').on('keyup', function () {
