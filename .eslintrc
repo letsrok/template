@@ -5,9 +5,8 @@
     "node": true,
     "jquery": true
   },
-  "extends" : "eslint:recommended",
+  "extends" : "standart",
   "rules" : {
-    "indent": ["error", "spaces"],
     "no-console": 0
   }
 }

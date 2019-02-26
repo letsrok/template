@@ -5,14 +5,14 @@ mixin menu()
       -var menu = getData("menu")
          for item in menu
             +e.LI.item
-              +e.A.link(href="/") !{item.name}
+              +e.A.link(href=item.href) !{item.name}
               if(item.drop)
                 +e.UL.drop
                   for itemDrop in item.drop
                     +e.LI.item._drop
-                      +e.A.link._drop(href="/") !{itemDrop.name}
+                      +e.A.link._drop(href=itemDrop.href) !{itemDrop.name}
                       if(itemDrop.sub)
                         +e.UL.sub
                           for itemSub in itemDrop.sub
                             +e.LI.item._sub
-                              +e.A.link._sub(href="/") !{itemSub.name}
+                              +e.A.link._sub(href=itemSub.href) !{itemSub.name}
