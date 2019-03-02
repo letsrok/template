@@ -20,5 +20,4 @@ $(document).on('click', '.accordion__header', function(e) {
     setTimeout(function () {siblings.removeClass('is-active')}, DURATION);
   }
 });
-
 /* Accordions End */
