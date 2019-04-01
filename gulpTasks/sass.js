@@ -13,8 +13,8 @@ module.exports = function(){
       .pipe(bulkSass())
       .pipe(sass())
       .pipe(postcss([
-        require('postcss-discard-comments'),
         require('postcss-import'),
+        require('postcss-discard-comments'),
         require('postcss-discard-duplicates'),
       ]))
       .pipe(autoprefixer({
