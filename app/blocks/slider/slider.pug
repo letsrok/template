@@ -12,5 +12,7 @@ mixin slider(pagination, buttons)
 mixin slide(title)
   .swiper-slide
     +e.slide&attributes(attributes)
-      .slider__title !{title}
+      a(href="/")
+      if title
+        .slider__title !{title}
       block

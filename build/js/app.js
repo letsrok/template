@@ -255,11 +255,13 @@ $('.scroll-top').on('click', function () {
 // Slider Begin
 
 $(document).ready(function () {
-  var slider = new Swiper('.slider-example', {
+  var slider = new Swiper('.js-slider_main', {
     slidesPerView: 1,
     centeredSlides: true,
+    speed: 1000,
+    loop: true,
     autoplay: {
-      delay: 7500,
+      delay: 5000,
       disableOnInteraction: false
     },
     navigation: {
