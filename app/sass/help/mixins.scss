@@ -62,18 +62,18 @@
 	}
 }
 
-@mixin screen($width, $type: min) {
-	@if map_has_key($breakpoints, $width) {
-		$width: map_get($breakpoints, $width);
+@mixin screen($width, $type: max) {
+  @if map_has_key($breakpoints, $width) {
+    $width: map_get($breakpoints, $width);
 
-		@if $type == max {
-			$width: $width - 1px;
-		}
+    @if $type == max {
+      $width: $width - 1px;
+    }
 
-		@media only screen and (#{$type}-width: $width) {
-			@content;
-		}
-	}
+    @media only screen and (#{$type}-width: $width) {
+      @content;
+    }
+  }
 }
 
 

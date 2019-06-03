@@ -1,2 +1,38 @@
+@mixin font-face($name, $style, $weight, $fontname) {
+  $path: '../fonts/';
+
+  @font-face {
+    font-family: $name;
+    font-style: $style;
+    font-weight: $weight;
+    src: url($path + $fontname + '.eot');
+    src:
+      url('' + $path + $fontname + '.eot?#iefix') format('embedded-opentype'),
+      url('' + $path + $fontname + '.otf') format('opentype'),
+      url('' + $path + $fontname + '.woff2') format('woff2'),
+      url('' + $path + $fontname + '.woff') format('woff'),
+      url('' + $path + $fontname + '.ttf') format('truetype'),
+      url('' + $path + $fontname + '.svg#' + $fontname) format('svg');
+  }
+}
+
+/*
+Как подключать шрифт
+Миксин:
+@mixin font-face($name, $style, $weight, $fontname)
+Пример использования:
+@include font-face('Corbel', normal, 700, 'CorbelBold')
+Соответствие письменного названия жирности числовому значению:
+100 — Thin
+200 — Extra Light, Ultra Light
+300 — Light
+400 — Normal, Book, Regular (стандартный)
+500 — Medium
+600 — Semi Bold, Demi Bold
+700 — Bold
+800 — Extra Bold, Ultra Bold
+900 — Black, Heavy
+*/
+
 $main: Arial;
 $second: Tahoma;
