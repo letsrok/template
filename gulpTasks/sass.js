@@ -12,7 +12,11 @@ module.exports = function(){
     return $.gulp.src('app/sass/main.scss')
       .pipe(plumber({ errorHandler: errorHandler('Error in styles task') }))
       .pipe(bulkSass())
-      .pipe(sass())
+      .pipe(sass({
+        indentType: 'tab',
+        indentWidth: 1,
+        outputStyle: 'expanded'
+      }))
       .pipe(postcss([
         require('postcss-import'),
         require('postcss-discard-comments'),
