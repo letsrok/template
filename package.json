@@ -39,6 +39,7 @@
     "gulp-eslint": "^5.0.0",
     "gulp-filter": "^6.0.0",
     "gulp-gh-pages": "^0.5.4",
+    "gulp-group-css-media-queries": "^1.2.2",
     "gulp-include": "^2.4.1",
     "gulp-plumber": "^1.2.1",
     "gulp-plumber-error-handler": "^1.0.0",
