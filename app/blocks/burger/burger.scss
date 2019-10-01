@@ -5,8 +5,8 @@
 
   @include screen("md", max){
     display: flex;
-		width: 45px;
-		height: 45px;
+		width: 32px;
+		height: 29px;
 		justify-content: center;
 		align-items: center;
 		position: relative;
@@ -44,12 +44,12 @@
 
 			&::before {
 				transform: rotate(-45deg);
-				top: calc(100% - 24px);
+				top: calc(100% - 14px);
 				opacity: 1;
 			}
 			&::after{
 				transform: rotate(45deg);
-				top: 21px;
+				top: 16px;
 			}
 
 			span {

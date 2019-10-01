@@ -2,19 +2,23 @@ mixin form(action, method)
   +b.FORM(action=action method=method).form&attributes()
     block
 
-mixin inputbox()
-  .inputbox&attributes(attributes)
+mixin input-box()
+  +b.input__box&attributes(attributes)
+    block
+    
+mixin input-title()
+  +b.LABEL.input__title&attributes(attributes)
     block
 
 mixin input()
-  input.input&attributes(attributes)
+  +b.INPUT.input&attributes(attributes)
 
 mixin textarea()
-  textarea.textarea&attributes(attributes)
+  +b.TEXTAREA.textarea&attributes(attributes)
     block
 
 mixin select()
-  select.select&attributes(attributes).js-select
+  +b.SELECT.select&attributes(attributes).js-select
     block
 
 mixin checkbox(name, value, checked)

@@ -1,18 +1,19 @@
 mixin slider(pagination, buttons)
-  +b.slider&attributes(attributes).swiper-container.js-slider
-    .swiper-wrapper
-      block
-    if pagination
-      +e.dots
-        +e.dot
+  .slider-wrapper
+    +b.slider&attributes(attributes).swiper-container.js-slider
+      .swiper-wrapper
+        block
+      if pagination
+        +e.dots
+          +e.dot
     if buttons
-      +e.button._prev
-      +e.button._next
+      .slider__button-wrap.wrap
+        .slider__button.slider__button_prev
+        .slider__button.slider__button_next
 
-mixin slide(title)
-  .swiper-slide
-    +e.slide&attributes(attributes)
-      a(href="/")
-      if title
-        .slider__title !{title}
-      block
+mixin slide(title, img)
+  .swiper-slide(style="background-image: url("+img+");")
+    a(href="/")
+    if title
+      .slider__title !{title}
+        block

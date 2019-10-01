@@ -1,23 +1,24 @@
 mixin feedback()
   +b.feedback
-    +e.title Запрос звонка
+    +e.title.w-700 Запрос звонка
     +e.info
-      +e.error
+      +e.error.feedback__error-form-1
         +e.error-title Ошибка!
         +e.error-text Не все обязательные поля заполнены
-      +e.load-wrap
+      +e.load-wrap.feedback__load-wrap-form-1
         +e.load
           +e.load-img
           +e.load-text Сообщение обрабатывается
-      +e.done Ваше сообщение отправлено! <br> Мы свяжемся с вами в ближайшее время.
-    +e.FORM.form(method="post")
-      +e.input-wrap._human
-        +e.placeholder Как к вам обращаться
-        +e.INPUT.input._requied(name="name" type="text")
-      +e.input-wrap._phone
-        +e.placeholder Номер телефона
-        +e.INPUT.input._requied(name="phone" type="phone")
-      +e.input-wrap._text
-        +e.placeholder Комментраии и пожелания
-        +e.TEXTAREA.textarea(name="text" type="phone" noresize)
-      +e.A.button.js-feedback-send Отправить
+      +e.done.feedback__done-form-1
+        p Ваше сообщение отправлено! <br> Мы свяжемся с вами в ближайшее время.
+    +e.FORM.form(method="post" id="form-1")
+      +input-box()
+        +input-title(for="form-1-name").w-700 Как к вам обращаться
+        +input(type="text" id="form-1-name")._icon._icon-human.input_required
+      +input-box()
+        +input-title(for="form-1-phone").w-700 Номер телефона
+        +input(type="text" id="form-1-phone")._icon._icon-phone.input_required.input_number
+      +input-box()
+        +input-title(for="form-1-text").w-700 Комментраии и пожелания
+        +textarea(type="text" id="form-1-text" noresize)._icon._icon-text
+      +e.A.button.js-feedback-send.btn-form-1 Отправить

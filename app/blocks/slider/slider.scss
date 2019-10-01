@@ -2,7 +2,10 @@
 
 	&__wrap {
 		position: relative;
-		height: 600px;
+	}
+
+	&-wrapper {
+		position: relative;
 	}
 
 	&__button {
@@ -13,11 +16,8 @@
 		background-color: #eee;
 		border-radius: 50%;
 		z-index: 10;
-		position: absolute;
 		cursor: pointer;
 		transition: all .3s ease;
-		transform: translateY(-50%);
-		top: 50%;
 
 		&:hover {
 			background-color: $color-main;
@@ -39,7 +39,7 @@
 		}
 
 		&_prev {
-			left: 20px;
+			margin-left: 20px;
 
 			&::before {
 				transform: rotate(-45deg);
@@ -48,12 +48,19 @@
 		}
 
 		&_next {
-			right: 20px;
+			margin-right: 20px;
 
 			&::before {
 				transform: rotate(135deg);
 				right: -10px;
 			}
+		}
+
+		&-wrap {
+			@include center-block;
+			padding: 0;
+			display: flex;
+			justify-content: space-between;
 		}
 	}
 
@@ -81,7 +88,6 @@
 .swiper {
 
 	&-container {
-		height: 300px;
 		position: relative;
 		overflow: hidden;
 	}
@@ -95,8 +101,11 @@
 
 	&-slide {
 		position: relative;
-		height: 100%;
+		//height: 0;
 		flex-shrink: 0;
+		@include ratio(1140,300);
+		background-repeat: no-repeat;
+		background-size: cover;
 	}
 
 	&-button-disabled {

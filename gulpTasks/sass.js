@@ -23,7 +23,6 @@ module.exports = function(){
         require('postcss-discard-duplicates'),
       ]))
       .pipe(autoprefixer({
-        browsers: ['> 0.1%'],
         cascade: false
       }))
       .pipe(gulpGroup())

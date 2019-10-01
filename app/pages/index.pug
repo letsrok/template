@@ -85,10 +85,10 @@ block content
     h2 <em>Слайдер</em>
     br
     +slider(false, true)._main
-      +slide()
-        img(src="https://via.placeholder.com/1140x300")
-      +slide('Lorem ipsum dolor sit amet, consectetur adipisicing.')
-        img(src="https://via.placeholder.com/1140x300")
+      +slide(false,
+             'https://via.placeholder.com/1140x300')
+      +slide('Lorem ipsum dolor sit amet, consectetur adipisicing.',
+            'https://via.placeholder.com/1140x300')
   .wrap
     br
     h2 <em>Хлебные крошки</em>
@@ -108,28 +108,28 @@ block content
     h2 <em>Элементы форм</em>
     br
     +form('#', 'post')
-      +inputbox()
+      +input-box()
         +input(placeholder="Надпись")
       br
       +textarea(placeholder="Текстовое поле")
       br
-      +inputbox()
+      +input-box()
         +input()(placeholder="Выберите дату" readonly).js-datepicker
       br
-      +inputbox()
+      +input-box()
         +select()
           option(value="Опция 1") Опция 1
           option(value="Опция 2") Опция 2
           option(value="Опция 3") Опция 3
       br
-      +inputbox()
+      +input-box()
         +checkbox('checkbox', 'test', 'true') Чекбокс
       br
-      +inputbox()
+      +input-box()
         +radio('ui-radio', 'test', 'true') Радиокнопка
         +radio('ui-radio', 'test-2') Радиокнопка
       br
-      +inputbox()
+      +input-box()
         +input-number()(placeholder="Выберите количество")
   .wrap
     br

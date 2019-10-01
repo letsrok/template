@@ -1,51 +1,67 @@
 // Feedback Begin
 
 
-$('.feedback__input_requied').on('change', function () {
- verifyForm($(this));
-});
-
-$('.feedback__input[type="phone"]').on('keyup', function () {
-  $(this).val($(this).val().replace (/\D/, ''));
-});
-
 function verifyForm (target){
-  let value = target.val().trim().length;
+  const value = target.val().trim().length;
 
   if(value < 1) {
-    target.addClass('feedback__input_error');
-    target.prev('.feedback__placeholder').addClass('feedback__placeholder_error');
+    target.addClass('input_error');
+    target.prev('.input__title').addClass('input__title_error');
     return false;
   } else {
-    target.removeClass('feedback__input_error');
-    target.prev('.feedback__placeholder').removeClass('feedback__placeholder_error');
+    target.removeClass('input_error');
+    target.prev('.input__title').removeClass('input__title_error');
     return 1;
   }
 }
 
-$('.js-feedback-send').on('click', function(){
+function mainForm(id) {
+  const animTime = 500,
+        input = $(`#${id} input`),
+        button = $(`.btn-${id}`),
+        boxDone = $(`.feedback__done-${id}`),
+        boxError = $(`.feedback__error-${id}`),
+        boxLoad = $(`.feedback__load-wrap-${id}`);
 
-  $('.feedback__input_requied').each(function () {
-    verifyForm($(this));
-  });
-
-  if($('.feedback__placeholder_error').length > 0) {
-    if($('.feedback__done').is(':visible') || $('.feedback__load-wrap').is(':visible')){
-      $('.feedback__error').delay(500).fadeIn(500);
-      $('.feedback__done, .feedback__load-wrap').fadeOut(500);
-    } else {
-      $('.feedback__error').fadeIn(500);
+  input.on('input', function(){
+    if($(this).hasClass('input_number')) {
+      $(this).val($(this).val().replace (/\D/, ''));
     }
+  })
 
-  } else {
+  input.on('change', function(){
+    if($(this).hasClass('input_required'))  verifyForm($(this));
+  })
 
-    if($('.feedback__done').is(':visible') || $('.feedback__error').is(':visible')){
-      $('.feedback__load-wrap').delay(500).fadeIn(500);
-      $('.feedback__error, .feedback__done').fadeOut(500);
-    } else {
-      $('.feedback__load-wrap').fadeIn(500);
+  button.on('click', function(){
+    input.each(function(){
+      if($(this).hasClass('input_required'))  verifyForm($(this));
+    })
+
+    if(!input.hasClass('input_error')) { // All OK
+
+      if(boxDone.is(':visible') || boxError.is(':visible')){
+        boxLoad.delay(animTime).fadeIn(animTime);
+        $(boxError, boxDone).fadeOut(animTime);
+      }
+        else {
+          boxLoad.fadeIn(animTime);
+      }
+    } 
+    
+    else { 
+
+      if(boxDone.is(':visible') || boxLoad.is(':visible')){
+        boxError.delay(animTime).fadeIn(animTime);
+        $(boxDone, boxLoad).fadeOut(animTime);
+      } 
+        else {
+          boxError.fadeIn(animTime);
+        }
     }
-  }
-});
+  })
+}
+
+let form1 = mainForm('form-1');
 
 // Feedback End
