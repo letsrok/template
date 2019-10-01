@@ -155,21 +155,20 @@
     </div>
     <div class="wrap"><br>
       <h2><em>Слайдер</em></h2><br>
-      <div class="slider swiper-container js-slider js-slider_main">
-        <div class="swiper-wrapper">
-          <div class="swiper-slide">
-            <div class="slider__slide"><a href="/"></a><img src="https://via.placeholder.com/1140x300">
+      <div class="slider-wrapper">
+        <div class="slider swiper-container js-slider js-slider_main">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide" style="background-image: url(https://via.placeholder.com/1140x300);"><a href="/"></a>
             </div>
-          </div>
-          <div class="swiper-slide">
-            <div class="slider__slide"><a href="/"></a>
-              <div class="slider__title">Lorem ipsum dolor sit amet, consectetur adipisicing.</div><img src="https://via.placeholder.com/1140x300">
+            <div class="swiper-slide" style="background-image: url(https://via.placeholder.com/1140x300);"><a href="/"></a>
+              <div class="slider__title">Lorem ipsum dolor sit amet, consectetur adipisicing.
+              </div>
             </div>
           </div>
         </div>
-        <div class="slider__button slider__button_prev">
-        </div>
-        <div class="slider__button slider__button_next">
+        <div class="slider__button-wrap wrap">
+          <div class="slider__button slider__button_prev"></div>
+          <div class="slider__button slider__button_next"></div>
         </div>
       </div>
     </div>
@@ -201,31 +200,28 @@
     <div class="wrap"><br>
       <h2><em>Элементы форм</em></h2><br>
       <form class="form" action="#" method="post">
-        <div class="inputbox">
-          <input class="input" placeholder="Надпись"/>
+        <div class="input__box"><input class="input" placeholder="Надпись" type="text"/>
+        </div><br><textarea class="textarea" placeholder="Текстовое поле"></textarea><br>
+        <div class="input__box"><input class="input js-datepicker" placeholder="Выберите дату" readonly="readonly" type="text"/>
         </div><br>
-        <textarea class="textarea" placeholder="Текстовое поле"></textarea><br>
-        <div class="inputbox">
-          <input class="input js-datepicker" placeholder="Выберите дату" readonly="readonly"/>
-        </div><br>
-        <div class="inputbox">
+        <div class="input__box">
           <select class="select js-select">
             <option value="Опция 1">Опция 1</option>
             <option value="Опция 2">Опция 2</option>
             <option value="Опция 3">Опция 3</option>
           </select>
         </div><br>
-        <div class="inputbox">
+        <div class="input__box">
           <label class="checkradio"><input class="checkradio__input" name="checkbox" value="test" check="check" type="checkbox"/><span class="checkradio__box"></span><span class="checkradio__content">Чекбокс</span>
           </label>
         </div><br>
-        <div class="inputbox">
+        <div class="input__box">
           <label class="checkradio"><input class="checkradio__input" name="ui-radio" value="test" checked="true" type="radio"/><span class="checkradio__box"></span><span class="checkradio__content">Радиокнопка</span>
           </label>
           <label class="checkradio"><input class="checkradio__input" name="ui-radio" value="test-2" type="radio"/><span class="checkradio__box"></span><span class="checkradio__content">Радиокнопка</span>
           </label>
         </div><br>
-        <div class="inputbox">
+        <div class="input__box">
           <div class="input-numberbox"><span class="input-numberbox__button js-numberbox-minus"></span>
             <input class="input input-numberbox__input js-numberbox-input" placeholder="Выберите количество"/><span class="input-numberbox__button js-numberbox-plus"></span>
           </div>
@@ -263,16 +259,16 @@
         <div class="popup__close">
         </div>
         <div class="feedback">
-          <div class="feedback__title">Запрос звонка
+          <div class="feedback__title w-700">Запрос звонка
           </div>
           <div class="feedback__info">
-            <div class="feedback__error">
+            <div class="feedback__error feedback__error-form-1">
               <div class="feedback__error-title">Ошибка!
               </div>
               <div class="feedback__error-text">Не все обязательные поля заполнены
               </div>
             </div>
-            <div class="feedback__load-wrap">
+            <div class="feedback__load-wrap feedback__load-wrap-form-1">
               <div class="feedback__load">
                 <div class="feedback__load-img">
                 </div>
@@ -280,22 +276,23 @@
                 </div>
               </div>
             </div>
-            <div class="feedback__done">Ваше сообщение отправлено! <br> Мы свяжемся с вами в ближайшее время.
+            <div class="feedback__done feedback__done-form-1">
+              <p>Ваше сообщение отправлено! <br> Мы свяжемся с вами в ближайшее время.</p>
             </div>
           </div>
-          <form class="feedback__form" method="post">
-            <div class="feedback__input-wrap feedback__input-wrap_human">
-              <div class="feedback__placeholder">Как к вам обращаться
-              </div><input class="feedback__input feedback__input_requied" name="name" type="text"/>
+          <form class="feedback__form" method="post" id="form-1">
+            <div class="input__box">
+              <label class="input__title w-700" for="form-1-name">Как к вам обращаться
+              </label><input class="input input_icon input_icon-human input input_required" type="text" id="form-1-name"/>
             </div>
-            <div class="feedback__input-wrap feedback__input-wrap_phone">
-              <div class="feedback__placeholder">Номер телефона
-              </div><input class="feedback__input feedback__input_requied" name="phone" type="phone"/>
+            <div class="input__box">
+              <label class="input__title w-700" for="form-1-phone">Номер телефона
+              </label><input class="input input_icon input_icon-phone input input_required input input_number" type="text" id="form-1-phone"/>
             </div>
-            <div class="feedback__input-wrap feedback__input-wrap_text">
-              <div class="feedback__placeholder">Комментраии и пожелания
-              </div><textarea class="feedback__textarea" name="text" type="phone" noresize="noresize"></textarea>
-            </div><a class="feedback__button js-feedback-send">Отправить</a>
+            <div class="input__box">
+              <label class="input__title w-700" for="form-1-text">Комментраии и пожелания
+              </label><textarea class="textarea textarea_icon textarea_icon-text" type="text" id="form-1-text" noresize="noresize"></textarea>
+            </div><a class="feedback__button js-feedback-send btn-form-1">Отправить</a>
           </form>
         </div>
       </div>
