@@ -24,6 +24,12 @@ $(document).on('click', '.accordion__header', function (e) {
 /* Accordions End */
 // Feedback Begin
 
+$('.btn-check input').on('change', function () {
+  var target = $(this).val(),
+      btn = $(".btn-".concat(target));
+  $(this).prop('checked') ? btn.removeClass('disabled') : btn.addClass('disabled');
+});
+
 function verifyForm(target) {
   var value = target.val().trim().length;
 
@@ -62,9 +68,9 @@ function mainForm(id) {
       // All OK
       if (boxDone.is(':visible') || boxError.is(':visible')) {
         boxLoad.delay(animTime).fadeIn(animTime);
-        $(boxError, boxDone).fadeOut(animTime);
+        $(boxError, boxDone).fadeOut(animTime); //sendmail();
       } else {
-        boxLoad.fadeIn(animTime);
+        boxLoad.fadeIn(animTime); //sendmail();
       }
     } else {
       if (boxDone.is(':visible') || boxLoad.is(':visible')) {
@@ -76,6 +82,29 @@ function mainForm(id) {
     }
   });
 }
+/*function sendmail(data, form) {
+  
+  data = {
+
+  }
+
+  $.ajax({
+		type: "POST",
+		url: "../sendermail.php",
+		data: data,
+		cache: false,
+		success: function(response){
+			if(response == 1){
+				$(`.feedback__load-wrap-form-1`).fadeOut(500);
+				$('.feedback__done-form-1').delay(500).fadeIn(500);
+			} else {
+				$('.feedback__load-wrap-form-1').fadeOut(500);
+        $('.feedback__error-form-1').delay(500).fadeIn(500);
+	 		}
+		}
+	});
+}*/
+
 
 var form1 = mainForm('form-1'); // Feedback End
 
@@ -216,11 +245,9 @@ $('.nav__prev').on('click', function () {
 $('.burger').on('click', function () {
   $('.nav').toggleClass('nav_active');
   $('.burger').toggleClass('burger_active');
-  $('body').toggleClass('body_freeze');
 });
 $(window).on('resize', function () {
   if ($(window).width() >= point) {
-    $('body').removeClass('body_freeze');
     $('.nav').removeClass('nav_active');
     $('.burger').removeClass('burger_active');
   }
