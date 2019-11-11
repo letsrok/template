@@ -24,7 +24,7 @@ mixin select()
 mixin checkbox(name, value, checked)
   +b.LABEL.checkradio&attributes(attributes)
     - var check = checked || '';
-    +e.INPUT.input(name=name, value=value, check, type="checkbox")
+    +e.INPUT.input(name=name, value=value, checked, type="checkbox")
     +e.SPAN.box
     +e.SPAN.content
       block

@@ -1,5 +1,12 @@
 // Feedback Begin
 
+$('.btn-check input').on('change', function(){
+  let target = $(this).val(),
+      btn = $(`.btn-${target}`);
+
+  $(this).prop('checked') ? btn.removeClass('disabled') : btn.addClass('disabled');
+
+})
 
 function verifyForm (target){
   const value = target.val().trim().length;
@@ -43,9 +50,11 @@ function mainForm(id) {
       if(boxDone.is(':visible') || boxError.is(':visible')){
         boxLoad.delay(animTime).fadeIn(animTime);
         $(boxError, boxDone).fadeOut(animTime);
+        //sendmail();
       }
         else {
           boxLoad.fadeIn(animTime);
+          //sendmail();
       }
     } 
     
@@ -61,6 +70,29 @@ function mainForm(id) {
     }
   })
 }
+
+/*function sendmail(data, form) {
+  
+  data = {
+
+  }
+
+  $.ajax({
+		type: "POST",
+		url: "../sendermail.php",
+		data: data,
+		cache: false,
+		success: function(response){
+			if(response == 1){
+				$(`.feedback__load-wrap-form-1`).fadeOut(500);
+				$('.feedback__done-form-1').delay(500).fadeIn(500);
+			} else {
+				$('.feedback__load-wrap-form-1').fadeOut(500);
+        $('.feedback__error-form-1').delay(500).fadeIn(500);
+	 		}
+		}
+	});
+}*/
 
 let form1 = mainForm('form-1');
 

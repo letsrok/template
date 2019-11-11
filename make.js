@@ -5,6 +5,7 @@ const { promisify } = require('util');
 
 const sources = {
   block: require('./templates/block'),
+  component: require('./templates/component'),
   page: require('./templates/page'),
   scss: require('./templates/scss'),
   js: require('./templates/js'),
@@ -12,6 +13,7 @@ const sources = {
 
 const dirPath = {
   block: path.resolve('app/blocks'),
+  component: path.resolve('app/components'),
   page: path.resolve('app/pages'),
 };
 
@@ -100,20 +102,24 @@ const getFiles = blockPath => (
 const appendToIncludes = (kind, blockName) => {
   const filePath = './app/layouts/blocks.pug';
 
-  if (['block'].indexOf(kind) === -1) {
+  if (['component', 'block', 'page'].indexOf(kind) === -1) {
     return;
   }
 
   const file = fs.readFileSync(filePath, 'utf8');
-  const includeString = `include ../${kind}s/${blockName}/${blockName}`;
-  const lines = file.split(/\n/).filter(line => !!line);
+  const includeString = kind === 'page' ? `      +e.A.link(href="${blockName}.html") Страница ${blockName} (${blockName}.html)` : `include ../${kind}s/${blockName}/${blockName}`;
+  let lines = file.split(/\n/);
+
+  if (lines.slice(-1)[0].length < 1) {
+    lines.pop();
+  }
 
   if (lines.indexOf(includeString) !== -1) {
     return console.log(`>>> ${kind} ${blockName} already included to '${filePath}'`);
   }
 
   lines.push(includeString);
-  const nextFile = lines.sort().join('\n');
+  const nextFile = lines.join('\n');
   fs.writeFileSync(filePath, nextFile, 'utf8');
 };
 
@@ -155,6 +161,21 @@ program
   });
 
 program
+  .command('component [componentNames...]')
+  .option('--js', 'Generate script file')
+  .action(async (componentNames, opts) => {
+    if (componentNames === undefined) {
+      return console.log('Please enter componentName');
+    }
+
+    const promises = componentNames.map(name => make(name, 'component', opts.js));
+    Promise.all(promises).catch(printError);
+
+    const blocks = await Promise.all(promises).catch(printError);
+    blocks.forEach(block => appendToIncludes(block.kind, block.name));
+});
+
+program
   .command('page [pageNames...]')
   .option('--js', 'Generate script file')
   .action(async (pageNames, opts) => {
@@ -164,6 +185,9 @@ program
 
     const promises = pageNames.map(name => make(name, 'page', opts.js));
     Promise.all(promises).catch(printError);
+
+    const blocks = await Promise.all(promises).catch(printError);
+    blocks.forEach(block => appendToIncludes(block.kind, block.name));
   });
 
 program.parse(process.argv);

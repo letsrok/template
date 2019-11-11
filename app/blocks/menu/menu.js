@@ -68,12 +68,10 @@ $('.nav__prev').on('click', function() {
 $('.burger').on('click', () => {
 	$('.nav').toggleClass('nav_active');
 	$('.burger').toggleClass('burger_active');
-	$('body').toggleClass('body_freeze');
 });
 
 $(window).on('resize', () => {
 	if( $(window).width() >= point ) {
-		$('body').removeClass('body_freeze');
 		$('.nav').removeClass('nav_active');
 		$('.burger').removeClass('burger_active');
 	}

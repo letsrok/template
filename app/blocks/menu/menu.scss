@@ -51,8 +51,7 @@
 		line-height: 45px;
 		padding: 0 15px;
 		text-decoration: none;
-		text-transform: uppercase;
-		transform: $tr;
+		transition: $tr;
 		background-color: $color-main;
 		color: #fff;
 
