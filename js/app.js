@@ -44,7 +44,7 @@ function verifyForm(target) {
   }
 }
 
-function mainForm(id) {
+function mainForm(id, funcSend) {
   var animTime = 500,
       input = $("#".concat(id, " input")),
       button = $(".btn-".concat(id)),
@@ -68,9 +68,11 @@ function mainForm(id) {
       // All OK
       if (boxDone.is(':visible') || boxError.is(':visible')) {
         boxLoad.delay(animTime).fadeIn(animTime);
-        $(boxError, boxDone).fadeOut(animTime); //sendmail();
+        $(boxError, boxDone).fadeOut(animTime);
+        funcSend();
       } else {
-        boxLoad.fadeIn(animTime); //sendmail();
+        boxLoad.fadeIn(animTime);
+        funcSend();
       }
     } else {
       if (boxDone.is(':visible') || boxLoad.is(':visible')) {
@@ -82,31 +84,27 @@ function mainForm(id) {
     }
   });
 }
-/*function sendmail(data, form) {
-  
-  data = {
 
-  }
-
+function sendmail(data, form) {
+  data = {};
   $.ajax({
-		type: "POST",
-		url: "../sendermail.php",
-		data: data,
-		cache: false,
-		success: function(response){
-			if(response == 1){
-				$(`.feedback__load-wrap-form-1`).fadeOut(500);
-				$('.feedback__done-form-1').delay(500).fadeIn(500);
-			} else {
-				$('.feedback__load-wrap-form-1').fadeOut(500);
+    type: "POST",
+    url: "../sendermail.php",
+    data: data,
+    cache: false,
+    success: function success(response) {
+      if (response == 1) {
+        $(".feedback__load-wrap-form-1").fadeOut(500);
+        $('.feedback__done-form-1').delay(500).fadeIn(500);
+      } else {
+        $('.feedback__load-wrap-form-1').fadeOut(500);
         $('.feedback__error-form-1').delay(500).fadeIn(500);
-	 		}
-		}
-	});
-}*/
+      }
+    }
+  });
+}
 
-
-var form1 = mainForm('form-1'); // Feedback End
+var form1 = mainForm('form-1', sendmail); // Feedback End
 
 /*Form Begin*/
 
