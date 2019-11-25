@@ -22,7 +22,7 @@ function verifyForm (target){
   }
 }
 
-function mainForm(id) {
+function mainForm(id, funcSend) {
   const animTime = 500,
         input = $(`#${id} input`),
         button = $(`.btn-${id}`),
@@ -50,11 +50,11 @@ function mainForm(id) {
       if(boxDone.is(':visible') || boxError.is(':visible')){
         boxLoad.delay(animTime).fadeIn(animTime);
         $(boxError, boxDone).fadeOut(animTime);
-        //sendmail();
+        funcSend();
       }
         else {
           boxLoad.fadeIn(animTime);
-          //sendmail();
+          funcSend();
       }
     } 
     
@@ -71,7 +71,7 @@ function mainForm(id) {
   })
 }
 
-/*function sendmail(data, form) {
+function sendmail(data, form) {
   
   data = {
 
@@ -92,8 +92,8 @@ function mainForm(id) {
 	 		}
 		}
 	});
-}*/
+}
 
-let form1 = mainForm('form-1');
+let form1 = mainForm('form-1', sendmail);
 
 // Feedback End

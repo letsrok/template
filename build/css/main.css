@@ -262,6 +262,7 @@ body {
 a {
   color: #23a53b;
   text-decoration: underline;
+  -webkit-transition: color .3s ease;
   transition: color .3s ease;
 }
 
@@ -318,12 +319,19 @@ a:focus {
   border-width: 1px 1px 0 0;
   border-style: solid;
   border-color: black;
+  -webkit-transform-origin: center;
+  -ms-transform-origin: center;
   transform-origin: center;
+  -webkit-transform: translateY(-50%) rotate(135deg);
+  -ms-transform: translateY(-50%) rotate(135deg);
   transform: translateY(-50%) rotate(135deg);
+  -webkit-transition: all 0.3s ease;
   transition: all 0.3s ease;
 }
 
 .accordion.is-active .accordion__header::after {
+  -webkit-transform: translateY(-50%) rotate(-45deg);
+  -ms-transform: translateY(-50%) rotate(-45deg);
   transform: translateY(-50%) rotate(-45deg);
   margin-top: 2px;
 }
@@ -377,6 +385,9 @@ a:focus {
 }
 
 .breadcrumbs {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
   display: flex;
 }
 
@@ -420,6 +431,7 @@ a:focus {
   text-decoration: none;
   border-radius: 5px;
   background-color: #23a53b;
+  -webkit-transition: all 0.3s ease;
   transition: all 0.3s ease;
   border: 1px solid transparent;
 }
@@ -455,14 +467,26 @@ a:focus {
 }
 
 .feedback__load {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
   justify-content: center;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
   align-items: center;
   margin: 0 auto;
   font-size: 14px;
 }
 
 .feedback__info_process .feedback__load {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
   display: flex;
 }
 
@@ -492,8 +516,18 @@ a:focus {
 }
 
 .feedback__form {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
   flex-direction: column;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
   align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
   justify-content: center;
   width: 100%;
 }
@@ -528,6 +562,8 @@ a:focus {
   position: absolute;
   left: 10px;
   top: 68%;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
   transform: translateY(-50%);
   background-size: 100%;
   z-index: 5;
@@ -544,7 +580,13 @@ a:focus {
 }
 
 .feedback__button {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
   justify-content: center;
   text-align: center;
   width: 100%;
@@ -554,6 +596,7 @@ a:focus {
   text-decoration: none;
   border-radius: 5px;
   background-color: #23a53b;
+  -webkit-transition: all 0.3s ease;
   transition: all 0.3s ease;
   border: 1px solid transparent;
   cursor: pointer;
@@ -575,20 +618,24 @@ a:focus {
 
 @-webkit-keyframes spin {
   0% {
+    -webkit-transform: rotate(0);
     transform: rotate(0);
   }
 
   100% {
+    -webkit-transform: rotate(360deg);
     transform: rotate(360deg);
   }
 }
 
 @keyframes spin {
   0% {
+    -webkit-transform: rotate(0);
     transform: rotate(0);
   }
 
   100% {
+    -webkit-transform: rotate(360deg);
     transform: rotate(360deg);
   }
 }
@@ -608,7 +655,14 @@ a:focus {
 }
 
 .input__box {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
   flex-direction: column;
   margin-top: 20px;
   width: 100%;
@@ -701,6 +755,7 @@ a:focus {
   background-color: #23a53b;
   display: block;
   opacity: 0;
+  -webkit-transition: all 0.3s ease;
   transition: all 0.3s ease;
   position: absolute;
   top: 0;
@@ -732,6 +787,7 @@ a:focus {
 
 .input-numberbox__button::before,
 .input-numberbox__button::after {
+  -webkit-transition: all 0.3s ease;
   transition: all 0.3s ease;
 }
 
@@ -744,6 +800,9 @@ a:focus {
 }
 
 .input-numberbox__input {
+  -webkit-box-flex: 1;
+  -webkit-flex: 1;
+  -ms-flex: 1;
   flex: 1;
   border-left: 0;
   border-right: 0;
@@ -1096,7 +1155,12 @@ a:focus {
 }
 
 .datepicker--cells {
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: -webkit-box;
   display: flex;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
   flex-wrap: wrap;
 }
 
@@ -1104,9 +1168,18 @@ a:focus {
   border-radius: 4px;
   box-sizing: border-box;
   cursor: pointer;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: -webkit-box;
   display: flex;
   position: relative;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  -webkit-box-align: center;
   align-items: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  -webkit-box-pack: center;
   justify-content: center;
   height: 32px;
   z-index: 1;
@@ -1191,16 +1264,33 @@ a:focus {
 }
 
 .datepicker--days-names {
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: -webkit-box;
   display: flex;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
   flex-wrap: wrap;
   margin: 8px 0 3px;
 }
 
 .datepicker--day-name {
   color: #FF9A19;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: -webkit-box;
   display: flex;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  -webkit-box-align: center;
   align-items: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  -webkit-box-pack: center;
   justify-content: center;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  -webkit-box-flex: 1;
   flex: 1;
   text-align: center;
   text-transform: uppercase;
@@ -1252,30 +1342,46 @@ a:focus {
   position: absolute;
   left: -100000px;
   opacity: 0;
+  transition: opacity 0.3s ease, left 0s 0.3s, -webkit-transform 0.3s ease;
+  -webkit-transition: opacity 0.3s ease, left 0s 0.3s, -webkit-transform 0.3s ease;
   transition: opacity 0.3s ease, transform 0.3s ease, left 0s 0.3s;
+  transition: opacity 0.3s ease, transform 0.3s ease, left 0s 0.3s, -webkit-transform 0.3s ease;
   z-index: 100;
 }
 
 .datepicker.-from-top- {
+  -webkit-transform: translateY(-8px);
+  -ms-transform: translateY(-8px);
   transform: translateY(-8px);
 }
 
 .datepicker.-from-right- {
+  -webkit-transform: translateX(8px);
+  -ms-transform: translateX(8px);
   transform: translateX(8px);
 }
 
 .datepicker.-from-bottom- {
+  -webkit-transform: translateY(8px);
+  -ms-transform: translateY(8px);
   transform: translateY(8px);
 }
 
 .datepicker.-from-left- {
+  -webkit-transform: translateX(-8px);
+  -ms-transform: translateX(-8px);
   transform: translateX(-8px);
 }
 
 .datepicker.active {
   opacity: 1;
+  -webkit-transform: translate(0);
+  -ms-transform: translate(0);
   transform: translate(0);
+  transition: opacity 0.3s ease, left 0s 0s, -webkit-transform 0.3s ease;
+  -webkit-transition: opacity 0.3s ease, left 0s 0s, -webkit-transform 0.3s ease;
   transition: opacity 0.3s ease, transform 0.3s ease, left 0s 0s;
+  transition: opacity 0.3s ease, transform 0.3s ease, left 0s 0s, -webkit-transform 0.3s ease;
 }
 
 .datepicker-inline .datepicker {
@@ -1285,6 +1391,8 @@ a:focus {
   left: auto;
   right: auto;
   opacity: 1;
+  -webkit-transform: none;
+  -ms-transform: none;
   transform: none;
 }
 
@@ -1315,6 +1423,8 @@ a:focus {
 .-top-center- .datepicker--pointer,
 .-top-right- .datepicker--pointer {
   top: calc(100% - 4px);
+  -webkit-transform: rotate(135deg);
+  -ms-transform: rotate(135deg);
   transform: rotate(135deg);
 }
 
@@ -1322,6 +1432,8 @@ a:focus {
 .-right-center- .datepicker--pointer,
 .-right-bottom- .datepicker--pointer {
   right: calc(100% - 4px);
+  -webkit-transform: rotate(225deg);
+  -ms-transform: rotate(225deg);
   transform: rotate(225deg);
 }
 
@@ -1329,6 +1441,8 @@ a:focus {
 .-bottom-center- .datepicker--pointer,
 .-bottom-right- .datepicker--pointer {
   bottom: calc(100% - 4px);
+  -webkit-transform: rotate(315deg);
+  -ms-transform: rotate(315deg);
   transform: rotate(315deg);
 }
 
@@ -1336,6 +1450,8 @@ a:focus {
 .-left-center- .datepicker--pointer,
 .-left-bottom- .datepicker--pointer {
   left: calc(100% - 4px);
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
   transform: rotate(45deg);
 }
 
@@ -1378,7 +1494,13 @@ a:focus {
 }
 
 .datepicker--nav {
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: -webkit-box;
   display: flex;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  -webkit-box-pack: justify;
   justify-content: space-between;
   border-bottom: 1px solid #efefef;
   min-height: 32px;
@@ -1391,9 +1513,18 @@ a:focus {
 
 .datepicker--nav-title,
 .datepicker--nav-action {
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: -webkit-box;
   display: flex;
   cursor: pointer;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  -webkit-box-align: center;
   align-items: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  -webkit-box-pack: center;
   justify-content: center;
 }
 
@@ -1446,6 +1577,9 @@ a:focus {
 }
 
 .datepicker--buttons {
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: -webkit-box;
   display: flex;
   padding: 4px;
   border-top: 1px solid #efefef;
@@ -1455,9 +1589,21 @@ a:focus {
   color: #4EB5E6;
   cursor: pointer;
   border-radius: 4px;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  -webkit-box-flex: 1;
   flex: 1;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: -webkit-inline-box;
   display: inline-flex;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  -webkit-box-pack: center;
   justify-content: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  -webkit-box-align: center;
   align-items: center;
   height: 32px;
 }
@@ -1469,13 +1615,22 @@ a:focus {
 
 .datepicker--time {
   border-top: 1px solid #efefef;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: -webkit-box;
   display: flex;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  -webkit-box-align: center;
   align-items: center;
   padding: 4px;
   position: relative;
 }
 
 .datepicker--time.-am-pm- .datepicker--time-sliders {
+  -webkit-flex: 0 1 138px;
+  -ms-flex: 0 1 138px;
+  -webkit-box-flex: 0;
   flex: 0 1 138px;
   max-width: 138px;
 }
@@ -1485,6 +1640,9 @@ a:focus {
 }
 
 .datepicker--time-sliders {
+  -webkit-flex: 0 1 153px;
+  -ms-flex: 0 1 153px;
+  -webkit-box-flex: 0;
   flex: 0 1 153px;
   margin-right: 10px;
   max-width: 153px;
@@ -1496,8 +1654,17 @@ a:focus {
 }
 
 .datepicker--time-current {
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: -webkit-box;
   display: flex;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  -webkit-box-align: center;
   align-items: center;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  -webkit-box-flex: 1;
   flex: 1;
   font-size: 14px;
   text-align: center;
@@ -1539,6 +1706,8 @@ a:focus {
 
 .datepicker--time-current-ampm {
   text-transform: uppercase;
+  -webkit-align-self: flex-end;
+  -ms-flex-item-align: end;
   align-self: flex-end;
   color: #9c9c9c;
   margin-left: 6px;
@@ -1547,10 +1716,17 @@ a:focus {
 }
 
 .datepicker--time-row {
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: -webkit-box;
   display: flex;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  -webkit-box-align: center;
   align-items: center;
   font-size: 11px;
   height: 17px;
+  background: -webkit-linear-gradient(left, #dedede, #dedede) left 50%/100% 1px no-repeat;
   background: linear-gradient(to right, #dedede, #dedede) left 50%/100% 1px no-repeat;
 }
 
@@ -1561,6 +1737,9 @@ a:focus {
 .datepicker--time-row input[type='range'] {
   background: none;
   cursor: pointer;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  -webkit-box-flex: 1;
   flex: 1;
   height: 100%;
   padding: 0;
@@ -1615,6 +1794,7 @@ a:focus {
   border: 1px solid #dedede;
   background: #fff;
   cursor: pointer;
+  -webkit-transition: background .2s;
   transition: background .2s;
 }
 
@@ -1626,6 +1806,7 @@ a:focus {
   border: 1px solid #dedede;
   background: #fff;
   cursor: pointer;
+  -webkit-transition: background .2s;
   transition: background .2s;
 }
 
@@ -1637,6 +1818,7 @@ a:focus {
   border: 1px solid #dedede;
   background: #fff;
   cursor: pointer;
+  -webkit-transition: background .2s;
   transition: background .2s;
 }
 
@@ -1703,6 +1885,8 @@ a:focus {
   width: 1px;
   left: calc(50% - 1px);
   top: calc(50% + 1px);
+  -webkit-transform: translateY(-100%);
+  -ms-transform: translateY(-100%);
   transform: translateY(-100%);
 }
 
@@ -1757,7 +1941,13 @@ a:focus {
 }
 
 .nav {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
   justify-content: space-between;
   background-color: #23a53b;
   width: 100%;
@@ -1771,6 +1961,7 @@ a:focus {
   z-index: 999;
   font-size: 20px;
   color: #fff;
+  -webkit-transition: all 0.3s ease;
   transition: all 0.3s ease;
   opacity: 0;
   cursor: pointer;
@@ -1789,12 +1980,22 @@ a:focus {
   border-bottom: 8px solid transparent;
   border-right: 10px solid #fff;
   z-index: 3;
+  -webkit-transition: all 0.3s ease;
   transition: all 0.3s ease;
 }
 
 .nav__ul {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+  -ms-flex-pack: start;
   justify-content: flex-start;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
   align-items: center;
 }
 
@@ -1808,6 +2009,7 @@ a:focus {
   line-height: 45px;
   padding: 0 15px;
   text-decoration: none;
+  -webkit-transition: all 0.3s ease;
   transition: all 0.3s ease;
   background-color: #23a53b;
   color: #fff;
@@ -1839,6 +2041,7 @@ a:focus {
   opacity: 0;
   pointer-events: none;
   position: absolute;
+  -webkit-transition: all 0.3s ease;
   transition: all 0.3s ease;
 }
 
@@ -1854,10 +2057,16 @@ a:focus {
 }
 
 .menu {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
   display: flex;
 }
 
 .pagination {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
   display: flex;
   color: #000;
   text-align: center;
@@ -1869,21 +2078,41 @@ a:focus {
   border: 2px solid #23a53b;
   width: 45px;
   height: 45px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
   align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
   justify-content: center;
   color: #23a53b;
   margin-right: 10px;
+  -webkit-transition: all 0.3s ease;
   transition: all 0.3s ease;
 }
 
 .pagination li a {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
   justify-content: center;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
   align-items: center;
   width: 100%;
   height: 100%;
   text-decoration: none;
+  -webkit-transition: all 0.3s ease;
   transition: all 0.3s ease;
 }
 
@@ -1907,8 +2136,17 @@ a:focus {
 }
 
 .popups {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
   align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
   justify-content: center;
   position: fixed;
   left: 0;
@@ -1920,6 +2158,9 @@ a:focus {
 }
 
 .popups_open {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
   display: flex;
   opacity: 1;
   z-index: 25;
@@ -1933,6 +2174,7 @@ a:focus {
   width: 100%;
   height: 100%;
   background-color: rgba(0, 0, 0, 0.8);
+  -webkit-transition: all 0.3s ease;
   transition: all 0.3s ease;
   z-index: 500;
 }
@@ -1960,6 +2202,10 @@ a:focus {
   -webkit-animation: small-show .5s;
   animation: small-show .5s;
   display: block;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
   flex-direction: column;
 }
 
@@ -1970,11 +2216,16 @@ a:focus {
   width: 30px;
   height: 30px;
   cursor: pointer;
+  -webkit-transform: rotate(0deg);
+  -ms-transform: rotate(0deg);
   transform: rotate(0deg);
+  -webkit-transition: all 0.3s ease;
   transition: all 0.3s ease;
 }
 
 .popup__close:hover {
+  -webkit-transform: rotate(90deg);
+  -ms-transform: rotate(90deg);
   transform: rotate(90deg);
 }
 
@@ -1987,15 +2238,20 @@ a:focus {
   background-color: #23a53b;
   top: calc(50% - .5px);
   left: 0;
+  -webkit-transition: all 0.3s ease;
   transition: all 0.3s ease;
   box-shadow: 0px 0px 0px #23a53b;
 }
 
 .popup__close::before {
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
   transform: rotate(45deg);
 }
 
 .popup__close::after {
+  -webkit-transform: rotate(-45deg);
+  -ms-transform: rotate(-45deg);
   transform: rotate(-45deg);
 }
 
@@ -2021,11 +2277,13 @@ a:focus {
 
 @-webkit-keyframes small-hide {
   0% {
+    -webkit-transform: scale(1);
     transform: scale(1);
     opacity: 1;
   }
 
   100% {
+    -webkit-transform: scale(0.5);
     transform: scale(0.5);
     opacity: 0;
     display: none;
@@ -2034,11 +2292,13 @@ a:focus {
 
 @keyframes small-hide {
   0% {
+    -webkit-transform: scale(1);
     transform: scale(1);
     opacity: 1;
   }
 
   100% {
+    -webkit-transform: scale(0.5);
     transform: scale(0.5);
     opacity: 0;
     display: none;
@@ -2055,6 +2315,7 @@ a:focus {
   right: 25px;
   z-index: 100;
   background-color: #23a53b;
+  -webkit-transition: all 0.3s ease;
   transition: all 0.3s ease;
 }
 
@@ -2067,7 +2328,10 @@ a:focus {
   left: 50%;
   border-top: 2px solid #fff;
   border-left: 2px solid #fff;
+  -webkit-transform: translate(-50%, -50%) rotate(45deg);
+  -ms-transform: translate(-50%, -50%) rotate(45deg);
   transform: translate(-50%, -50%) rotate(45deg);
+  -webkit-transition: all 0.3s ease;
   transition: all 0.3s ease;
 }
 
@@ -2085,7 +2349,13 @@ a:focus {
 }
 
 .site-search__form {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
   justify-content: space-between;
   width: 250px;
 }
@@ -2105,6 +2375,7 @@ a:focus {
   line-height: 28px;
   border: 1px solid #d6d6d6;
   border-radius: 3px;
+  -webkit-transition: all 0.3s ease;
   transition: all 0.3s ease;
   color: #23a53b;
   font-size: 14px;
@@ -2130,12 +2401,19 @@ a:focus {
 .slider__button {
   width: 38px;
   height: 38px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
   align-items: center;
   background-color: #eee;
   border-radius: 50%;
   z-index: 10;
   cursor: pointer;
+  -webkit-transition: all .3s ease;
   transition: all .3s ease;
 }
 
@@ -2155,6 +2433,7 @@ a:focus {
   border-left: 2px solid;
   border-color: #23a53b;
   position: relative;
+  -webkit-transition: all .3s ease;
   transition: all .3s ease;
 }
 
@@ -2163,6 +2442,8 @@ a:focus {
 }
 
 .slider__button_prev::before {
+  -webkit-transform: rotate(-45deg);
+  -ms-transform: rotate(-45deg);
   transform: rotate(-45deg);
   right: -15px;
 }
@@ -2172,6 +2453,8 @@ a:focus {
 }
 
 .slider__button_next::before {
+  -webkit-transform: rotate(135deg);
+  -ms-transform: rotate(135deg);
   transform: rotate(135deg);
   right: -10px;
 }
@@ -2180,9 +2463,17 @@ a:focus {
   position: absolute;
   top: 50%;
   left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
   padding: 0;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
   justify-content: space-between;
 }
 
@@ -2214,12 +2505,20 @@ a:focus {
 .swiper-wrapper {
   width: 100%;
   height: 100%;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
   align-items: center;
 }
 
 .swiper-slide {
   position: relative;
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
   flex-shrink: 0;
   padding-top: 26.31579%;
   background-repeat: no-repeat;
@@ -2231,8 +2530,17 @@ a:focus {
 }
 
 .tabs {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+  -ms-flex-pack: start;
   justify-content: flex-start;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
   align-items: center;
 }
 
@@ -2243,6 +2551,7 @@ a:focus {
   border-bottom: 2px solid transparent;
   display: block;
   color: black;
+  -webkit-transition: all 0.3s ease;
   transition: all 0.3s ease;
 }
 
@@ -2259,7 +2568,9 @@ a:focus {
 .tabs__content {
   visibility: hidden;
   opacity: 0;
+  -webkit-transition: all 0.3s ease;
   transition: all 0.3s ease;
+  -webkit-transform: translate3d(0, 10px, 0);
   transform: translate3d(0, 10px, 0);
   height: 0;
 }
@@ -2267,13 +2578,23 @@ a:focus {
 .tabs__content_active {
   visibility: visible;
   opacity: 1;
+  -webkit-transform: translate3d(0, 0, 0);
   transform: translate3d(0, 0, 0);
   height: auto;
 }
 
 .tabs-filters {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+  -ms-flex-pack: start;
   justify-content: flex-start;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
   align-items: center;
 }
 
@@ -2284,6 +2605,7 @@ a:focus {
   border-bottom: 2px solid transparent;
   display: block;
   color: black;
+  -webkit-transition: all 0.3s ease;
   transition: all 0.3s ease;
 }
 
@@ -2306,6 +2628,7 @@ a:focus {
 .tabs-filters__content_hidden {
   visibility: hidden;
   opacity: 0;
+  -webkit-transition: all 0.3s ease;
   transition: all 0.3s ease;
   height: 0;
 }
@@ -2322,6 +2645,8 @@ a:focus {
     position: absolute;
     right: 10px;
     top: 50%;
+    -webkit-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
     transform: translateY(-50%);
   }
 
@@ -2339,10 +2664,19 @@ a:focus {
 
 @media only screen and (max-width: 767px) {
   .burger {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
     display: flex;
     width: 32px;
     height: 29px;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
     justify-content: center;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
     align-items: center;
     position: relative;
     margin-right: 15px;
@@ -2358,6 +2692,7 @@ a:focus {
     height: 2px;
     width: 100%;
     background-color: #fff;
+    -webkit-transition: all 0.3s ease;
     transition: all 0.3s ease;
   }
 
@@ -2380,12 +2715,16 @@ a:focus {
   }
 
   .burger_active::before {
+    -webkit-transform: rotate(-45deg);
+    -ms-transform: rotate(-45deg);
     transform: rotate(-45deg);
     top: calc(100% - 14px);
     opacity: 1;
   }
 
   .burger_active::after {
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
     transform: rotate(45deg);
     top: 16px;
   }
@@ -2395,7 +2734,13 @@ a:focus {
   }
 
   .menu {
+    -webkit-box-pack: end;
+    -webkit-justify-content: flex-end;
+    -ms-flex-pack: end;
     justify-content: flex-end;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
     align-items: center;
     background-color: #23a53b;
   }
@@ -2408,13 +2753,21 @@ a:focus {
     width: 100%;
     height: 100%;
     background-color: #23a53b;
+    -webkit-transition: all 0.3s ease;
     transition: all 0.3s ease;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
     justify-content: center;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
     align-items: center;
   }
 
   .nav_active {
     left: 0;
+    -webkit-transition: all 0.3s ease;
     transition: all 0.3s ease;
   }
 
@@ -2422,7 +2775,14 @@ a:focus {
     width: 100%;
     height: 100%;
     padding: 75px 0;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
     justify-content: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
     flex-direction: column;
   }
 
@@ -2441,6 +2801,8 @@ a:focus {
     position: absolute;
     right: 15px;
     top: 50%;
+    -webkit-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
     transform: translateY(-50%);
     width: 0;
     height: 0;
@@ -2448,6 +2810,7 @@ a:focus {
     border-bottom: 8px solid transparent;
     border-left: 10px solid #fff;
     z-index: 3;
+    -webkit-transition: all 0.3s ease;
     transition: all 0.3s ease;
   }
 
@@ -2467,12 +2830,26 @@ a:focus {
     left: 0;
     width: 100%;
     height: 100%;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
     flex-direction: column;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
     justify-content: center;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
     align-items: center;
     opacity: 0;
     pointer-events: none;
+    -webkit-transition: all 0.3s ease;
     transition: all 0.3s ease;
   }
 
