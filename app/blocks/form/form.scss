@@ -122,6 +122,10 @@
 			@include center-image;
 		}
 	}
+
+	&__content {
+		font-weight: 400;
+	}
 }
 
 .input-numberbox {

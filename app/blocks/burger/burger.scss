@@ -6,7 +6,7 @@
   @include screen("md", max){
     display: flex;
 		width: 32px;
-		height: 29px;
+		height: 32px;
 		justify-content: center;
 		align-items: center;
 		position: relative;
@@ -44,7 +44,7 @@
 
 			&::before {
 				transform: rotate(-45deg);
-				top: calc(100% - 14px);
+				top: calc(100% - 16px);
 				opacity: 1;
 			}
 			&::after{
