@@ -29,7 +29,7 @@ $.gulp.task('serve', function() {
 
 
 $.gulp.task('default', $.gulp.series(
-  'sass', 'pug', 'scripts', 'libs', 'delImages', 'imagesGet',
+  'sass', 'pug', 'scripts', 'libs', 'delImages', 'imagesGet', 'sprites',
   $.gulp.parallel('serve', 'watch')
 ));
 

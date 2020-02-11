@@ -15,5 +15,6 @@ module.exports = function () {
     $.gulp.watch('app/blocks/**/*.js', {usePolling: true}, $.gulp.series('scripts'));
     $.gulp.watch('app/components/**/*.js', {usePolling: true}, $.gulp.series('scripts'));
     $.gulp.watch('app/images/**/*', {usePolling: true}, $.gulp.series('imagesGet'));
+    $.gulp.watch('app/images/icons/*.*', {usePolling: true}, $.gulp.series('sprites'));
   })
 };

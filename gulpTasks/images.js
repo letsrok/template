@@ -7,7 +7,7 @@ const plumber = require('gulp-plumber'),
 
 module.exports = function() {
   $.gulp.task('imagesGet', () => {
-    return $.gulp.src('app/images/**/*')
+    return $.gulp.src('app/images/*.*')
       .pipe(plumber({ errorHandler: errorHandler('Error in img task') }))
       .pipe(changed('build/images'))
       .pipe(imagemin())

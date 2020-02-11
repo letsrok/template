@@ -1,0 +1,113 @@
+// SCSS variables are information about icon's compiled state, stored under its original file name
+//
+// .icon-home {
+//   width: $icon-home-width;
+// }
+//
+// The large array-like variables contain all information about a single icon
+// $icon-home: x y offset_x offset_y width height total_width total_height image_path;
+//
+// At the bottom of this section, we provide information about the spritesheet itself
+// $spritesheet: width height image $spritesheet-sprites;
+$menu-6-name: 'menu-6';
+$menu-6-x: 37px;
+$menu-6-y: 0px;
+$menu-6-offset-x: -37px;
+$menu-6-offset-y: 0px;
+$menu-6-width: 20px;
+$menu-6-height: 16px;
+$menu-6-total-width: 57px;
+$menu-6-total-height: 54px;
+$menu-6-image: 'sprite.png';
+$menu-6: (37px, 0px, -37px, 0px, 20px, 16px, 57px, 54px, 'sprite.png', 'menu-6', );
+$phone-black-name: 'phone-black';
+$phone-black-x: 0px;
+$phone-black-y: 37px;
+$phone-black-offset-x: 0px;
+$phone-black-offset-y: -37px;
+$phone-black-width: 17px;
+$phone-black-height: 17px;
+$phone-black-total-width: 57px;
+$phone-black-total-height: 54px;
+$phone-black-image: 'sprite.png';
+$phone-black: (0px, 37px, 0px, -37px, 17px, 17px, 57px, 54px, 'sprite.png', 'phone-black', );
+$phone-white-name: 'phone-white';
+$phone-white-x: 0px;
+$phone-white-y: 0px;
+$phone-white-offset-x: 0px;
+$phone-white-offset-y: 0px;
+$phone-white-width: 27px;
+$phone-white-height: 27px;
+$phone-white-total-width: 57px;
+$phone-white-total-height: 54px;
+$phone-white-image: 'sprite.png';
+$phone-white: (0px, 0px, 0px, 0px, 27px, 27px, 57px, 54px, 'sprite.png', 'phone-white', );
+$spritesheet-width: 57px;
+$spritesheet-height: 54px;
+$spritesheet-image: 'sprite.png';
+$spritesheet-sprites: ($menu-6, $phone-black, $phone-white, );
+$spritesheet: (57px, 54px, 'sprite.png', $spritesheet-sprites, );
+
+// The provided mixins are intended to be used with the array-like variables
+//
+// .icon-home {
+//   @include sprite-width($icon-home);
+// }
+//
+// .icon-email {
+//   @include sprite($icon-email);
+// }
+//
+// Example usage in HTML:
+//
+// `display: block` sprite:
+// <div class="icon-home"></div>
+//
+// To change `display` (e.g. `display: inline-block;`), we suggest using a common CSS class:
+//
+// // CSS
+// .icon {
+//   display: inline-block;
+// }
+//
+// // HTML
+// <i class="icon icon-home"></i>
+@mixin sprite-width($sprite) {
+  width: nth($sprite, 5);
+}
+
+@mixin sprite-height($sprite) {
+  height: nth($sprite, 6);
+}
+
+@mixin sprite-position($sprite) {
+  $sprite-offset-x: nth($sprite, 3);
+  $sprite-offset-y: nth($sprite, 4);
+  background-position: $sprite-offset-x  $sprite-offset-y;
+}
+
+@mixin sprite-image($sprite) {
+  $sprite-image: nth($sprite, 9);
+  background-image: url(#{$sprite-image});
+}
+
+@mixin sprite($sprite) {
+  @include sprite-image($sprite);
+  @include sprite-position($sprite);
+  @include sprite-width($sprite);
+  @include sprite-height($sprite);
+}
+
+
+// The `sprites` mixin generates identical output to the CSS template
+//   but can be overridden inside of SCSS
+//
+// @include sprites($spritesheet-sprites);
+@mixin sprites($sprites) {
+  @each $sprite in $sprites {
+    $sprite-name: nth($sprite, 10);
+    .#{$sprite-name} {
+      @include sprite($sprite);
+    }
+  }
+}

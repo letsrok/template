@@ -1,3 +1,15 @@
+@mixin sprite-imagee($sprite) {
+  $sprite-image: nth($sprite, 9);
+  background-image: url('../images/icons/#{$sprite-image}');
+}
+
+@mixin icon($sprite) {
+  @include sprite-imagee($sprite);
+  @include sprite-position($sprite);
+  @include sprite-width($sprite);
+  @include sprite-height($sprite);
+}
+
 
 @mixin ratio($x,$y, $pseudo: false) {
 	$padding: unquote(($y/$x) *100+'%');
