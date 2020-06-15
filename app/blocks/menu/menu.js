@@ -64,16 +64,27 @@ $('.nav__prev').on('click', function() {
 	}
 });
 
+function menuOpen() {
+	$('.nav').addClass('nav_active');
+	$('.burger').addClass('burger_active');
+	freeze();
+} 
+
+function menuClose() {
+	$('.nav').removeClass('nav_active');
+	$('.burger').removeClass('burger_active');
+	unfreeze();
+} 
+
 
 $('.burger').on('click', () => {
-	$('.nav').toggleClass('nav_active');
-	$('.burger').toggleClass('burger_active');
+	$('.nav').hasClass('nav_active') ? menuClose() : menuOpen();
+	
 });
 
-$(window).on('resize', () => {
+$(window).on('resize, orientationchange', () => {
 	if( $(window).width() >= point ) {
-		$('.nav').removeClass('nav_active');
-		$('.burger').removeClass('burger_active');
+		menuClose();
 	}
 })
 
