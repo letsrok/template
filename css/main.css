@@ -260,7 +260,7 @@ body {
 }
 
 a {
-  color: #23a53b;
+  color: #246617;
   text-decoration: underline;
   -webkit-transition: color .3s ease;
   transition: color .3s ease;
@@ -269,7 +269,7 @@ a {
 a:hover,
 a:active,
 a:focus {
-  color: #53db6c;
+  color: #41b92a;
   text-decoration: none;
 }
 
@@ -418,7 +418,7 @@ a:focus {
 }
 
 .breadcrumbs a {
-  color: #23a53b;
+  color: #246617;
   text-decoration: none;
 }
 
@@ -440,7 +440,7 @@ a:focus {
   color: #fff;
   text-decoration: none;
   border-radius: 5px;
-  background-color: #23a53b;
+  background-color: #246617;
   -webkit-transition: all 0.3s ease;
   transition: all 0.3s ease;
   border: 1px solid transparent;
@@ -449,9 +449,9 @@ a:focus {
 .button:hover,
 .button:active,
 .button:focus {
-  color: #23a53b;
+  color: #246617;
   background-color: #fff;
-  border-color: #23a53b;
+  border-color: #246617;
 }
 
 .feedback {
@@ -505,7 +505,7 @@ a:focus {
   width: 20px;
   height: 20px;
   border: 2px solid #f3f3f3;
-  border-top: 2px solid #23a53b;
+  border-top: 2px solid #246617;
   border-radius: 50%;
   -webkit-animation: spin 1.5s linear infinite;
   animation: spin 1.5s linear infinite;
@@ -605,7 +605,7 @@ a:focus {
   color: #fff;
   text-decoration: none;
   border-radius: 5px;
-  background-color: #23a53b;
+  background-color: #246617;
   -webkit-transition: all 0.3s ease;
   transition: all 0.3s ease;
   border: 1px solid transparent;
@@ -616,9 +616,9 @@ a:focus {
 .feedback__button:hover,
 .feedback__button:active,
 .feedback__button:focus {
-  color: #23a53b;
+  color: #246617;
   background-color: #fff;
-  border-color: #23a53b;
+  border-color: #246617;
 }
 
 .feedback__button.disabled {
@@ -699,12 +699,12 @@ a:focus {
 
 .input_icon-human {
   background-size: 17px 17px;
-  background-image: url('data:image/svg+xml;utf8, <svg xmlns="http://www.w3.org/2000/svg" fill="%230081cb" viewBox="0 0 24 24">\a 					<path d="M 12 3 A 4 4 0 0 0 8 7 A 4 4 0 0 0 12 11 A 4 4 0 0 0 16 7 A 4 4 0 0 0 12 3 z M 12 14 C 8.859 14 3 15.546 3 18.5 L 3 21 L 13.171875 21 L 18.597656 15.572266 C 16.615656 14.535266 13.843 14 12 14 z M 22.207031 15 C 22.079156 15 21.951016 15.048984 21.853516 15.146484 L 20.853516 16.146484 L 22.853516 18.146484 L 23.853516 17.146484 C 24.048516 16.951484 24.048516 16.634453 23.853516 16.439453 L 22.560547 15.146484 C 22.462547 15.048984 22.334906 15 22.207031 15 z M 20.146484 16.853516 L 15 22 L 15 24 L 17 24 L 22.146484 18.853516 L 20.146484 16.853516 z"></path>\a 				</svg>');
+  background-image: url('data:image/svg+xml;utf8, <svg xmlns="http://www.w3.org/2000/svg" fill="%23d32228" viewBox="0 0 24 24">\a 					<path d="M 12 3 A 4 4 0 0 0 8 7 A 4 4 0 0 0 12 11 A 4 4 0 0 0 16 7 A 4 4 0 0 0 12 3 z M 12 14 C 8.859 14 3 15.546 3 18.5 L 3 21 L 13.171875 21 L 18.597656 15.572266 C 16.615656 14.535266 13.843 14 12 14 z M 22.207031 15 C 22.079156 15 21.951016 15.048984 21.853516 15.146484 L 20.853516 16.146484 L 22.853516 18.146484 L 23.853516 17.146484 C 24.048516 16.951484 24.048516 16.634453 23.853516 16.439453 L 22.560547 15.146484 C 22.462547 15.048984 22.334906 15 22.207031 15 z M 20.146484 16.853516 L 15 22 L 15 24 L 17 24 L 22.146484 18.853516 L 20.146484 16.853516 z"></path>\a 				</svg>');
 }
 
 .input_icon-phone {
   background-size: 17px 17px;
-  background-image: url('data:image/svg+xml;utf8, <svg xmlns="http://www.w3.org/2000/svg" fill="%230081cb" viewBox="0 0 24 24">\a 					<path d="M20.023,15.488c-0.63-0.015-1.423-0.052-1.924-0.14c-0.542-0.096-1.194-0.282-1.653-0.425 c-0.36-0.112-0.752-0.013-1.019,0.253L13.21,17.38c-1.532-0.807-2.759-1.747-3.798-2.792c-1.045-1.039-1.985-2.266-2.792-3.798 l2.204-2.218C9.09,8.305,9.189,7.913,9.077,7.553C8.935,7.095,8.748,6.443,8.653,5.901C8.564,5.4,8.528,4.607,8.512,3.977 C8.499,3.432,8.055,3,7.51,3H4C3.562,3,3,3.328,3,4c0,4.539,1.84,8.874,4.966,12.034C11.126,19.16,15.461,21,20,21 c0.672,0,1-0.562,1-1v-3.51C21,15.945,20.568,15.501,20.023,15.488z"></path>\a 				</svg>');
+  background-image: url('data:image/svg+xml;utf8, <svg xmlns="http://www.w3.org/2000/svg" fill="%23d32228" viewBox="0 0 24 24">\a 					<path d="M20.023,15.488c-0.63-0.015-1.423-0.052-1.924-0.14c-0.542-0.096-1.194-0.282-1.653-0.425 c-0.36-0.112-0.752-0.013-1.019,0.253L13.21,17.38c-1.532-0.807-2.759-1.747-3.798-2.792c-1.045-1.039-1.985-2.266-2.792-3.798 l2.204-2.218C9.09,8.305,9.189,7.913,9.077,7.553C8.935,7.095,8.748,6.443,8.653,5.901C8.564,5.4,8.528,4.607,8.512,3.977 C8.499,3.432,8.055,3,7.51,3H4C3.562,3,3,3.328,3,4c0,4.539,1.84,8.874,4.966,12.034C11.126,19.16,15.461,21,20,21 c0.672,0,1-0.562,1-1v-3.51C21,15.945,20.568,15.501,20.023,15.488z"></path>\a 				</svg>');
 }
 
 .textarea {
@@ -722,7 +722,7 @@ a:focus {
 
 .textarea_icon-text {
   background-size: 17px 17px;
-  background-image: url('data:image/svg+xml;utf8, <svg xmlns="http://www.w3.org/2000/svg" fill="%230081cb" viewBox="0 0 24 24">\a 					<path d="M2,5v12c0,1.1,0.9,2,2,2h14l4,4L21.99,5c0-1.1-0.89-2-1.99-2H4C2.9,3,2,3.9,2,5z M7,6h10v2H7V6z M7,10h10v2H7V10z M7,14h7 v2H7V14z"></path>\a 				</svg>');
+  background-image: url('data:image/svg+xml;utf8, <svg xmlns="http://www.w3.org/2000/svg" fill="%23d32228" viewBox="0 0 24 24">\a 					<path d="M2,5v12c0,1.1,0.9,2,2,2h14l4,4L21.99,5c0-1.1-0.89-2-1.99-2H4C2.9,3,2,3.9,2,5z M7,6h10v2H7V6z M7,10h10v2H7V10z M7,14h7 v2H7V14z"></path>\a 				</svg>');
 }
 
 .checkradio {
@@ -762,7 +762,7 @@ a:focus {
   content: '';
   width: 9px;
   height: 9px;
-  background-color: #23a53b;
+  background-color: #246617;
   display: block;
   opacity: 0;
   -webkit-transition: all 0.3s ease;
@@ -777,6 +777,8 @@ a:focus {
 
 .checkradio__content {
   font-weight: 400;
+  display: block;
+  font-size: 12px;
 }
 
 .input-numberbox {
@@ -1963,7 +1965,7 @@ a:focus {
   -webkit-justify-content: space-between;
   -ms-flex-pack: justify;
   justify-content: space-between;
-  background-color: #23a53b;
+  background-color: #246617;
   width: 100%;
 }
 
@@ -2025,19 +2027,19 @@ a:focus {
   text-decoration: none;
   -webkit-transition: all 0.3s ease;
   transition: all 0.3s ease;
-  background-color: #23a53b;
+  background-color: #246617;
   color: #fff;
 }
 
 .nav__item:hover > .nav__link {
   background-color: #fff;
-  color: #23a53b;
+  color: #246617;
 }
 
 .nav__drop {
   top: 45px;
   left: 0;
-  background-color: #23a53b;
+  background-color: #246617;
   width: 250px;
   z-index: 2;
 }
@@ -2046,7 +2048,7 @@ a:focus {
   left: 100%;
   top: 0;
   width: 250px;
-  background-color: #23a53b;
+  background-color: #246617;
   z-index: 3;
 }
 
@@ -2067,7 +2069,7 @@ a:focus {
 }
 
 .nav__link_drop {
-  background-color: #23a53b;
+  background-color: #246617;
 }
 
 .menu {
@@ -2089,7 +2091,7 @@ a:focus {
 }
 
 .pagination li {
-  border: 2px solid #23a53b;
+  border: 2px solid #246617;
   width: 45px;
   height: 45px;
   display: -webkit-box;
@@ -2104,7 +2106,7 @@ a:focus {
   -webkit-justify-content: center;
   -ms-flex-pack: center;
   justify-content: center;
-  color: #23a53b;
+  color: #246617;
   margin-right: 10px;
   -webkit-transition: all 0.3s ease;
   transition: all 0.3s ease;
@@ -2133,8 +2135,8 @@ a:focus {
 .pagination > li.active,
 .pagination > li.selected,
 .pagination > li:not(.disabled):hover {
-  background-color: #23a53b;
-  border-color: #23a53b;
+  background-color: #246617;
+  border-color: #246617;
   color: #fff;
 }
 
@@ -2249,12 +2251,12 @@ a:focus {
   position: absolute;
   width: 100%;
   height: 1px;
-  background-color: #23a53b;
+  background-color: #246617;
   top: calc(50% - .5px);
   left: 0;
   -webkit-transition: all 0.3s ease;
   transition: all 0.3s ease;
-  box-shadow: 0px 0px 0px #23a53b;
+  box-shadow: 0px 0px 0px #246617;
 }
 
 .popup__close::before {
@@ -2328,7 +2330,7 @@ a:focus {
   bottom: 25px;
   right: 25px;
   z-index: 100;
-  background-color: #23a53b;
+  background-color: #246617;
   -webkit-transition: all 0.3s ease;
   transition: all 0.3s ease;
 }
@@ -2354,8 +2356,8 @@ a:focus {
 }
 
 .scroll-top:hover::before {
-  border-left-color: #23a53b;
-  border-top-color: #23a53b;
+  border-left-color: #246617;
+  border-top-color: #246617;
 }
 
 .site-search {
@@ -2391,7 +2393,7 @@ a:focus {
   border-radius: 3px;
   -webkit-transition: all 0.3s ease;
   transition: all 0.3s ease;
-  color: #23a53b;
+  color: #246617;
   font-size: 14px;
   cursor: pointer;
   width: 66px;
@@ -2400,7 +2402,7 @@ a:focus {
 .site-search__submit:hover,
 .site-search__submit:active,
 .site-search__submit:focus {
-  background-color: #23a53b;
+  background-color: #246617;
   color: #fff;
 }
 
@@ -2432,7 +2434,7 @@ a:focus {
 }
 
 .slider__button:hover {
-  background-color: #23a53b;
+  background-color: #246617;
 }
 
 .slider__button:hover::before {
@@ -2445,7 +2447,7 @@ a:focus {
   height: 12px;
   border-top: 2px solid;
   border-left: 2px solid;
-  border-color: #23a53b;
+  border-color: #246617;
   position: relative;
   -webkit-transition: all .3s ease;
   transition: all .3s ease;
@@ -2496,7 +2498,7 @@ a:focus {
   z-index: 10;
   left: 20px;
   bottom: 35px;
-  background-color: #23a53b;
+  background-color: #246617;
   font-size: 17px;
   padding: 8px 30px;
   color: #fff;
@@ -2571,8 +2573,8 @@ a:focus {
 
 .tabs__tab:hover,
 .tabs__tab_active {
-  color: #23a53b;
-  border-bottom: 2px solid #23a53b;
+  color: #246617;
+  border-bottom: 2px solid #246617;
 }
 
 .tabs__wrapper {
@@ -2625,8 +2627,8 @@ a:focus {
 
 .tabs-filters__tab:hover,
 .tabs-filters__tab_active {
-  color: #23a53b;
-  border-bottom: 2px solid #23a53b;
+  color: #246617;
+  border-bottom: 2px solid #246617;
 }
 
 .tabs-filters__wrapper {
@@ -2756,7 +2758,7 @@ a:focus {
     -webkit-align-items: center;
     -ms-flex-align: center;
     align-items: center;
-    background-color: #23a53b;
+    background-color: #246617;
   }
 
   .nav {
@@ -2766,7 +2768,7 @@ a:focus {
     top: 0;
     width: 100%;
     height: 100%;
-    background-color: #23a53b;
+    background-color: #246617;
     -webkit-transition: all 0.3s ease;
     transition: all 0.3s ease;
     -webkit-box-pack: center;
@@ -2829,7 +2831,7 @@ a:focus {
   }
 
   .nav__item_parent:hover > .nav__link::after {
-    border-left-color: #23a53b;
+    border-left-color: #246617;
   }
 
   .nav__link {
