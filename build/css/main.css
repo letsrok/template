@@ -777,6 +777,9 @@ a:focus {
 
 .checkradio__content {
   font-weight: 400;
+}
+
+.feedback__form .checkradio__content {
   display: block;
   font-size: 12px;
 }

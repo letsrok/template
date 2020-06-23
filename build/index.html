@@ -1,313 +1,426 @@
-
-
-
-
-
 <!DOCTYPE html>
 <html lang="ru">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimal-ui">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>BSS70</title>
-    <meta name="description" content="">
-    <meta name="keywords" content="">
-    <link href="css/main.css" rel="stylesheet" type="text/css">
-    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
-    <script src="js/libs.js"></script>
-  </head>
-  <body>
-    <div class="wrap"><br>
-      <h2><em>Попапы</em></h2><br>
-      <A class="button js-popup" href="/" data-popup="popup-feedback">Запрос звонка
-      </A>
-      <A class="button js-popup" href="/" data-popup="popup-sample">Второй попап
-      </A>
-    </div>
-    <div class="wrap"><br>
-      <h2><em>Меню</em></h2><br>
-      <div class="menu">
-        <nav class="nav">
-          <div class="nav__prev">Назад
-          </div>
-          <ul class="nav__ul">
-            <li class="nav__item"><a class="nav__link" href="#">главная</a>
-            </li>
-            <li class="nav__item"><a class="nav__link" href="/">каталог</a>
-              <ul class="nav__drop">
-                <li class="nav__item nav__item_drop"><a class="nav__link nav__link_drop" href="/">Категория 1</a>
-                </li>
-                <li class="nav__item nav__item_drop"><a class="nav__link nav__link_drop" href="/">Категория 2</a>
-                </li>
-                <li class="nav__item nav__item_drop"><a class="nav__link nav__link_drop" href="/">Категория 3</a>
-                  <ul class="nav__sub">
-                    <li class="nav__item nav__item_sub"><a class="nav__link nav__link_sub" href="/">Категория 1</a>
-                    </li>
-                    <li class="nav__item nav__item_sub"><a class="nav__link nav__link_sub" href="/">Категория 2</a>
-                    </li>
-                    <li class="nav__item nav__item_sub"><a class="nav__link nav__link_sub" href="/">Категория 3</a>
-                    </li>
-                  </ul>
-                </li>
-                <li class="nav__item nav__item_drop"><a class="nav__link nav__link_drop" href="/">Категория 4</a>
-                </li>
-                <li class="nav__item nav__item_drop"><a class="nav__link nav__link_drop" href="/">Категория 5</a>
-                  <ul class="nav__sub">
-                    <li class="nav__item nav__item_sub"><a class="nav__link nav__link_sub" href="/">Категория 1</a>
-                    </li>
-                    <li class="nav__item nav__item_sub"><a class="nav__link nav__link_sub" href="/">Категория 2</a>
-                    </li>
-                    <li class="nav__item nav__item_sub"><a class="nav__link nav__link_sub" href="/">Категория 3</a>
-                    </li>
-                  </ul>
-                </li>
-                <li class="nav__item nav__item_drop"><a class="nav__link nav__link_drop" href="/">Категория 6</a>
-                </li>
-              </ul>
-            </li>
-            <li class="nav__item"><a class="nav__link" href="/">О нас</a>
-            </li>
-            <li class="nav__item"><a class="nav__link" href="/">Контакты</a>
-            </li>
-          </ul>
-        </nav>
-        <div class="burger"><span></span>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimal-ui">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>BSS70</title>
+  <meta name="description" content="">
+  <meta name="keywords" content="">
+  <link href="css/main.css" rel="stylesheet" type="text/css">
+  <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+  <script src="js/libs.js"></script>
+</head>
+
+<body>
+  <div class="wrap">
+    <br>
+    <h2>
+      <em>Попапы</em>
+    </h2>
+    <br>
+    <a class="button js-popup" href="/" data-popup="popup-feedback">Запрос звонка</a>
+    <a class="button js-popup" href="/" data-popup="popup-sample">Второй попап</a>
+  </div>
+  <div class="wrap">
+    <br>
+    <h2>
+      <em>Меню</em>
+    </h2>
+    <br>
+    <div class="menu">
+      <nav class="nav">
+        <div class="nav__prev">Назад
         </div>
+        <ul class="nav__ul">
+          <li class="nav__item">
+            <a class="nav__link" href="#">главная</a>
+          </li>
+          <li class="nav__item">
+            <a class="nav__link" href="/">каталог</a>
+            <ul class="nav__drop">
+              <li class="nav__item nav__item_drop">
+                <a class="nav__link nav__link_drop" href="/">Категория 1</a>
+              </li>
+              <li class="nav__item nav__item_drop">
+                <a class="nav__link nav__link_drop" href="/">Категория 2</a>
+              </li>
+              <li class="nav__item nav__item_drop">
+                <a class="nav__link nav__link_drop" href="/">Категория 3</a>
+                <ul class="nav__sub">
+                  <li class="nav__item nav__item_sub">
+                    <a class="nav__link nav__link_sub" href="/">Категория 1</a>
+                  </li>
+                  <li class="nav__item nav__item_sub">
+                    <a class="nav__link nav__link_sub" href="/">Категория 2</a>
+                  </li>
+                  <li class="nav__item nav__item_sub">
+                    <a class="nav__link nav__link_sub" href="/">Категория 3</a>
+                  </li>
+                </ul>
+              </li>
+              <li class="nav__item nav__item_drop">
+                <a class="nav__link nav__link_drop" href="/">Категория 4</a>
+              </li>
+              <li class="nav__item nav__item_drop">
+                <a class="nav__link nav__link_drop" href="/">Категория 5</a>
+                <ul class="nav__sub">
+                  <li class="nav__item nav__item_sub">
+                    <a class="nav__link nav__link_sub" href="/">Категория 1</a>
+                  </li>
+                  <li class="nav__item nav__item_sub">
+                    <a class="nav__link nav__link_sub" href="/">Категория 2</a>
+                  </li>
+                  <li class="nav__item nav__item_sub">
+                    <a class="nav__link nav__link_sub" href="/">Категория 3</a>
+                  </li>
+                </ul>
+              </li>
+              <li class="nav__item nav__item_drop">
+                <a class="nav__link nav__link_drop" href="/">Категория 6</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav__item">
+            <a class="nav__link" href="/">О нас</a>
+          </li>
+          <li class="nav__item">
+            <a class="nav__link" href="/">Контакты</a>
+          </li>
+        </ul>
+      </nav>
+      <div class="burger">
+        <span></span>
       </div>
     </div>
-    <div class="wrap"><br>
-      <h2><em>Контентная зона</em></h2><br>
-      <article class="article"><br>
-        <h1>Hello 123 q12123asdasd!!!</h1>
-        <ul>
-          <li>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolore, omnis?</li>
-          <li>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Pariatur, sunt?</li>
-          <li>Lorem ipsum dolor sit amet.</li>
-        </ul><br>
-        <ol>
-          <li>Lorem ipsum dolor sit amet, consectetur adipisicing.</li>
-          <li>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</li>
-          <li>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci dolorum praesentium quaerat quos sapiente tenetur?</li>
-        </ol>
-      </article>
-    </div>
-    <div class="wrap"><br>
-      <h2><em>Табы</em></h2><br>
-      <ul class="tabs" data-tabs="news">
-        <li class="tabs__tab tabs__tab_active">Категория 1
-        </li>
-        <li class="tabs__tab">Категория 2
-        </li>
-        <li class="tabs__tab">Категория 3
-        </li>
-        <li class="tabs__tab">Категория 4
-        </li>
-      </ul><br><br>
-      <div class="tabs__wrapper" data-tab="news">
-        <div class="tabs__content tabs__content_active">
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium eum, facilis fuga incidunt nobis placeat?</p>
-        </div>
-        <div class="tabs__content">
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci iure maiores nam odio. Aut cum dicta distinctio dolores dolorum eius eligendi ipsum iure nam rem.</p>
-        </div>
-        <div class="tabs__content">
-          <h2>Lorem ipsum dolor sit amet.</h2>
-        </div>
-        <div class="tabs__content">
-          <ul>
-            <li>Lorem ipsum dolor.</li>
-            <li>Lorem ipsum dolor sit.</li>
-            <li>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid dolor dolore eveniet iusto, minima minus nam repellendus sapiente?</li>
-            <li>Lorem ipsum dolor.</li>
-            <li>Lorem ipsum dolor sit.</li>
-            <li>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid dolor dolore eveniet iusto, minima minus nam repellendus sapiente?</li>
-          </ul>
-        </div>
-      </div>
-    </div>
-    <div class="wrap"><br>
-      <h2><em>Табы с фильтрами</em></h2><br>
-      <ul class="tabs-filters" data-tabs="article">
-        <li class="tabs-filters__tab tabs-filters__tab_active" data-tab-filter="article-all">Все новости
-        </li>
-        <li class="tabs-filters__tab" data-tab-filter="article-popular">Популярные
-        </li>
-        <li class="tabs-filters__tab" data-tab-filter="article-last">Последние
-        </li>
+  </div>
+  <div class="wrap">
+    <br>
+    <h2>
+      <em>Контентная зона</em>
+    </h2>
+    <br>
+    <article class="article">
+      <br>
+      <h1>Hello 123 q12123asdasd!!!</h1>
+      <ul>
+        <li>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolore, omnis?</li>
+        <li>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Pariatur, sunt?</li>
+        <li>Lorem ipsum dolor sit amet.</li>
       </ul>
-      <div class="tabs-filters__wrapper" data-tab="article">
-        <div class="tabs-filters__content article-all article-last">
-          <h3>Новость 1, последние новости</h3>
+      <br>
+      <ol>
+        <li>Lorem ipsum dolor sit amet, consectetur adipisicing.</li>
+        <li>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</li>
+        <li>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci dolorum praesentium quaerat quos sapiente tenetur?</li>
+      </ol>
+    </article>
+  </div>
+  <div class="wrap">
+    <br>
+    <h2>
+      <em>Табы</em>
+    </h2>
+    <br>
+    <ul class="tabs" data-tabs="news">
+      <li class="tabs__tab tabs__tab_active">Категория 1
+      </li>
+      <li class="tabs__tab">Категория 2
+      </li>
+      <li class="tabs__tab">Категория 3
+      </li>
+      <li class="tabs__tab">Категория 4
+      </li>
+    </ul>
+    <br>
+    <br>
+    <div class="tabs__wrapper" data-tab="news">
+      <div class="tabs__content tabs__content_active">
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium eum, facilis fuga incidunt nobis placeat?</p>
+      </div>
+      <div class="tabs__content">
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci iure maiores nam odio. Aut cum dicta distinctio dolores dolorum eius eligendi ipsum iure nam rem.</p>
+      </div>
+      <div class="tabs__content">
+        <h2>Lorem ipsum dolor sit amet.</h2>
+      </div>
+      <div class="tabs__content">
+        <ul>
+          <li>Lorem ipsum dolor.</li>
+          <li>Lorem ipsum dolor sit.</li>
+          <li>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid dolor dolore eveniet iusto, minima minus nam repellendus sapiente?</li>
+          <li>Lorem ipsum dolor.</li>
+          <li>Lorem ipsum dolor sit.</li>
+          <li>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid dolor dolore eveniet iusto, minima minus nam repellendus sapiente?</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div class="wrap">
+    <br>
+    <h2>
+      <em>Табы с фильтрами</em>
+    </h2>
+    <br>
+    <ul class="tabs-filters" data-tabs="article">
+      <li class="tabs-filters__tab tabs-filters__tab_active" data-tab-filter="article-all">Все новости
+      </li>
+      <li class="tabs-filters__tab" data-tab-filter="article-popular">Популярные
+      </li>
+      <li class="tabs-filters__tab" data-tab-filter="article-last">Последние
+      </li>
+    </ul>
+    <div class="tabs-filters__wrapper" data-tab="article">
+      <div class="tabs-filters__content article-all article-last">
+        <h3>Новость 1, последние новости</h3>
+      </div>
+      <div class="tabs-filters__content article-all article-last">
+        <h3>Новость 2, последние новости</h3>
+      </div>
+      <div class="tabs-filters__content article-all">
+        <h3>Новость 3, просто новость</h3>
+      </div>
+      <div class="tabs-filters__content article-all article-popular">
+        <h3>Новость 4, популярная новость</h3>
+      </div>
+      <div class="tabs-filters__content article-all article-popular">
+        <h3>Новость 5, популярная новость</h3>
+      </div>
+    </div>
+  </div>
+  <div class="wrap">
+    <br>
+    <h2>
+      <em>Слайдер</em>
+    </h2>
+    <br>
+    <div class="slider-wrapper">
+      <div class="slider swiper-container js-slider js-slider_main">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide" style="background-image: url(https://via.placeholder.com/1140x300);">
+            <a href="/"></a>
+          </div>
+          <div class="swiper-slide" style="background-image: url(https://via.placeholder.com/1140x300);">
+            <a href="/"></a>
+            <div class="slider__title">Lorem ipsum dolor sit amet, consectetur adipisicing.
+            </div>
+          </div>
         </div>
-        <div class="tabs-filters__content article-all article-last">
-          <h3>Новость 2, последние новости</h3>
+      </div>
+      <div class="slider__button-wrap wrap">
+        <div class="slider__button slider__button_prev"></div>
+        <div class="slider__button slider__button_next"></div>
+      </div>
+    </div>
+  </div>
+  <div class="wrap">
+    <br>
+    <h2>
+      <em>Хлебные крошки</em>
+    </h2>
+    <br>
+    <ul class="breadcrumbs">
+      <li>
+        <a href="/">home</a>
+      </li>
+      <li>
+        <a href="/">news</a>
+      </li>
+      <li>
+        <a href="/">new</a>
+      </li>
+    </ul>
+  </div>
+  <div class="wrap">
+    <br>
+    <h2>
+      <em>Пагинация</em>
+    </h2>
+    <br>
+    <ul class="pagination">
+      <li class="page">
+        <a href="/">1</a>
+      </li>
+      <li class="page selected">
+        <a href="/">2</a>
+      </li>
+      <li class="page">
+        <a href="/">3</a>
+      </li>
+    </ul>
+  </div>
+  <div class="wrap">
+    <br>
+    <h2>
+      <em>Форма поиска</em>
+    </h2>
+    <div class="site-search">
+      <form class="site-search__form complex-filter" action="#">
+        <input class="site-search__text" type="search" placeholder="Поиск..." name="cq" id="cq" />
+        <button class="site-search__submit" type="submit">Искать
+        </button>
+      </form>
+    </div>
+  </div>
+  <div class="wrap">
+    <br>
+    <h2>
+      <em>Элементы форм</em>
+    </h2>
+    <br>
+    <form class="form" action="#" method="post">
+      <div class="input__box">
+        <input class="input" placeholder="Надпись" type="text" />
+      </div>
+      <br>
+      <textarea class="textarea" placeholder="Текстовое поле"></textarea>
+      <br>
+      <div class="input__box">
+        <input class="input js-datepicker" placeholder="Выберите дату" readonly="readonly" type="text" />
+      </div>
+      <br>
+      <div class="input__box">
+        <select class="select js-select">
+          <option value="Опция 1">Опция 1</option>
+          <option value="Опция 2">Опция 2</option>
+          <option value="Опция 3">Опция 3</option>
+        </select>
+      </div>
+      <br>
+      <div class="input__box">
+        <label class="checkradio">
+          <input class="checkradio__input" name="checkbox" value="test" checked="checked" type="checkbox" />
+          <span class="checkradio__box"></span>
+          <span class="checkradio__content">Чекбокс</span>
+        </label>
+      </div>
+      <br>
+      <div class="input__box">
+        <label class="checkradio">
+          <input class="checkradio__input" name="ui-radio" value="test" checked="true" type="radio" />
+          <span class="checkradio__box"></span>
+          <span class="checkradio__content">Радиокнопка</span>
+        </label>
+        <label class="checkradio">
+          <input class="checkradio__input" name="ui-radio" value="test-2" type="radio" />
+          <span class="checkradio__box"></span>
+          <span class="checkradio__content">Радиокнопка</span>
+        </label>
+      </div>
+      <br>
+      <div class="input__box">
+        <div class="input-numberbox">
+          <span class="input-numberbox__button js-numberbox-minus"></span>
+          <input class="input input-numberbox__input js-numberbox-input" placeholder="Выберите количество" />
+          <span class="input-numberbox__button js-numberbox-plus"></span>
         </div>
-        <div class="tabs-filters__content article-all">
-          <h3>Новость 3, просто новость</h3>
+      </div>
+    </form>
+  </div>
+  <div class="wrap">
+    <br>
+    <h2>
+      <em>Аккордион</em>
+    </h2>
+    <br>
+    <div class="accordions" data-accordion-multiple="false">
+      <div class="accordion is-active">
+        <div class="accordion__header">Первый
         </div>
-        <div class="tabs-filters__content article-all article-popular">
-          <h3>Новость 4, популярная новость</h3>
+        <div class="accordion__body">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium, aliquid aut corporis cumque eaque error et eum expedita illum maiores necessitatibus quam quibusdam reiciendis sunt?
         </div>
-        <div class="tabs-filters__content article-all article-popular">
-          <h3>Новость 5, популярная новость</h3>
+      </div>
+      <div class="accordion">
+        <div class="accordion__header">Второй
+        </div>
+        <div class="accordion__body">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facere ipsum itaque non quo repudiandae, soluta!
+        </div>
+      </div>
+      <div class="accordion">
+        <div class="accordion__header">Третий
+        </div>
+        <div class="accordion__body">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facere ipsum itaque non quo repudiandae, soluta!
         </div>
       </div>
     </div>
-    <div class="wrap"><br>
-      <h2><em>Слайдер</em></h2><br>
-      <div class="slider-wrapper">
-        <div class="slider swiper-container js-slider js-slider_main">
-          <div class="swiper-wrapper">
-            <div class="swiper-slide" style="background-image: url(https://via.placeholder.com/1140x300);"><a href="/"></a>
+  </div>
+  <div class="wrap">
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+  </div>
+  <div class="popups">
+    <div class="popups__overlay">
+    </div>
+    <div class="popup popup-feedback">
+      <div class="popup__close">
+      </div>
+      <div class="feedback">
+        <div class="feedback__title w-700">Запрос звонка
+        </div>
+        <div class="feedback__info">
+          <div class="feedback__error feedback__error-form-1">
+            <div class="feedback__error-title">Ошибка!
             </div>
-            <div class="swiper-slide" style="background-image: url(https://via.placeholder.com/1140x300);"><a href="/"></a>
-              <div class="slider__title">Lorem ipsum dolor sit amet, consectetur adipisicing.
+            <div class="feedback__error-text">Не все обязательные поля заполнены
+            </div>
+          </div>
+          <div class="feedback__load-wrap feedback__load-wrap-form-1">
+            <div class="feedback__load">
+              <div class="feedback__load-img">
+              </div>
+              <div class="feedback__load-text">Сообщение обрабатывается
               </div>
             </div>
           </div>
+          <div class="feedback__done feedback__done-form-1">
+            <p>Ваше сообщение отправлено!
+              <br> Мы свяжемся с вами в ближайшее время.</p>
+          </div>
         </div>
-        <div class="slider__button-wrap wrap">
-          <div class="slider__button slider__button_prev"></div>
-          <div class="slider__button slider__button_next"></div>
-        </div>
-      </div>
-    </div>
-    <div class="wrap"><br>
-      <h2><em>Хлебные крошки</em></h2><br>
-      <ul class="breadcrumbs">
-        <li><a href="/">home</a></li>
-        <li><a href="/">news</a></li>
-        <li><a href="/">new</a></li>
-      </ul>
-    </div>
-    <div class="wrap"><br>
-      <h2><em>Пагинация</em></h2><br>
-      <ul class="pagination">
-        <li class="page"><a href="/">1</a></li>
-        <li class="page selected"><a href="/">2</a></li>
-        <li class="page"><a href="/">3</a></li>
-      </ul>
-    </div>
-    <div class="wrap"><br>
-      <h2><em>Форма поиска</em></h2>
-      <div class="site-search">
-        <form class="site-search__form complex-filter" action="#"><input class="site-search__text" type="search" placeholder="Поиск..." name="cq" id="cq"/>
-          <button class="site-search__submit" type="submit">Искать
-          </button>
+        <form class="feedback__form" method="post" id="form-1">
+          <div class="input__box">
+            <label class="input__title w-700" for="form-1-name">Как к вам обращаться
+            </label>
+            <input class="input input_icon input_icon-human input input_required" type="text" id="form-1-name" />
+          </div>
+          <div class="input__box">
+            <label class="input__title w-700" for="form-1-phone">Номер телефона
+            </label>
+            <input class="input input_icon input_icon-phone input input_required input input_number" type="text" id="form-1-phone" />
+          </div>
+          <div class="input__box">
+            <label class="input__title w-700" for="form-1-text">Комментарии и пожелания
+            </label>
+            <textarea class="textarea textarea_icon textarea_icon-text" type="text" id="form-1-text" noresize="noresize"></textarea>
+          </div>
+          <div class="input__box">
+            <label class="checkradio btn-check">
+              <input class="checkradio__input" name="form-1-checked" value="form-1" checked="checked" type="checkbox" />
+              <span class="checkradio__box"></span>
+              <span class="checkradio__content">Я выражаю свое согласие на обработку переданных мною персональных данных в соответствии с п.1 ст. 6 ФЗ РФ № 152 «О персональных данных». Обработка персональных данных осуществляется на территории Российской Федерации.</span>
+            </label>
+          </div>
+          <a class="feedback__button js-feedback-send btn-form-1">Отправить</a>
         </form>
       </div>
     </div>
-    <div class="wrap"><br>
-      <h2><em>Элементы форм</em></h2><br>
-      <form class="form" action="#" method="post">
-        <div class="input__box"><input class="input" placeholder="Надпись" type="text"/>
-        </div><br><textarea class="textarea" placeholder="Текстовое поле"></textarea><br>
-        <div class="input__box"><input class="input js-datepicker" placeholder="Выберите дату" readonly="readonly" type="text"/>
-        </div><br>
-        <div class="input__box">
-          <select class="select js-select">
-            <option value="Опция 1">Опция 1</option>
-            <option value="Опция 2">Опция 2</option>
-            <option value="Опция 3">Опция 3</option>
-          </select>
-        </div><br>
-        <div class="input__box">
-          <label class="checkradio"><input class="checkradio__input" name="checkbox" value="test" checked="checked" type="checkbox"/><span class="checkradio__box"></span><span class="checkradio__content">Чекбокс</span>
-          </label>
-        </div><br>
-        <div class="input__box">
-          <label class="checkradio"><input class="checkradio__input" name="ui-radio" value="test" checked="true" type="radio"/><span class="checkradio__box"></span><span class="checkradio__content">Радиокнопка</span>
-          </label>
-          <label class="checkradio"><input class="checkradio__input" name="ui-radio" value="test-2" type="radio"/><span class="checkradio__box"></span><span class="checkradio__content">Радиокнопка</span>
-          </label>
-        </div><br>
-        <div class="input__box">
-          <div class="input-numberbox"><span class="input-numberbox__button js-numberbox-minus"></span>
-            <input class="input input-numberbox__input js-numberbox-input" placeholder="Выберите количество"/><span class="input-numberbox__button js-numberbox-plus"></span>
-          </div>
-        </div>
-      </form>
-    </div>
-    <div class="wrap"><br>
-      <h2><em>Аккордион</em></h2><br>
-      <div class="accordions" data-accordion-multiple="false">
-        <div class="accordion is-active">
-          <div class="accordion__header">Первый
-          </div>
-          <div class="accordion__body">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium, aliquid aut corporis cumque eaque error et eum expedita illum maiores necessitatibus quam quibusdam reiciendis sunt?
-          </div>
-        </div>
-        <div class="accordion">
-          <div class="accordion__header">Второй
-          </div>
-          <div class="accordion__body">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facere ipsum itaque non quo repudiandae, soluta!
-          </div>
-        </div>
-        <div class="accordion">
-          <div class="accordion__header">Третий
-          </div>
-          <div class="accordion__body">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facere ipsum itaque non quo repudiandae, soluta!
-          </div>
-        </div>
+    <div class="popup popup-sample">
+      <div class="popup__close">
       </div>
+      <h1>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deserunt, sunt?</h1>
     </div>
-    <div class="wrap"><br><br><br><br><br><br><br><br><br></div>
-    <div class="popups">
-      <div class="popups__overlay">
-      </div>
-      <div class="popup popup-feedback">
-        <div class="popup__close">
-        </div>
-        <div class="feedback">
-          <div class="feedback__title w-700">Запрос звонка
-          </div>
-          <div class="feedback__info">
-            <div class="feedback__error feedback__error-form-1">
-              <div class="feedback__error-title">Ошибка!
-              </div>
-              <div class="feedback__error-text">Не все обязательные поля заполнены
-              </div>
-            </div>
-            <div class="feedback__load-wrap feedback__load-wrap-form-1">
-              <div class="feedback__load">
-                <div class="feedback__load-img">
-                </div>
-                <div class="feedback__load-text">Сообщение обрабатывается
-                </div>
-              </div>
-            </div>
-            <div class="feedback__done feedback__done-form-1">
-              <p>Ваше сообщение отправлено! <br> Мы свяжемся с вами в ближайшее время.</p>
-            </div>
-          </div>
-          <form class="feedback__form" method="post" id="form-1">
-            <div class="input__box">
-              <label class="input__title w-700" for="form-1-name">Как к вам обращаться
-              </label><input class="input input_icon input_icon-human input input_required" type="text" id="form-1-name"/>
-            </div>
-            <div class="input__box">
-              <label class="input__title w-700" for="form-1-phone">Номер телефона
-              </label><input class="input input_icon input_icon-phone input input_required input input_number" type="text" id="form-1-phone"/>
-            </div>
-            <div class="input__box">
-              <label class="input__title w-700" for="form-1-text">Комментарии и пожелания
-              </label><textarea class="textarea textarea_icon textarea_icon-text" type="text" id="form-1-text" noresize="noresize"></textarea>
-            </div>
-            <div class="input__box">
-              <label class="checkradio btn-check"><input class="checkradio__input" name="form-1-checked" value="form-1" checked="checked" type="checkbox"/><span class="checkradio__box"></span><span class="checkradio__content">Я выражаю свое согласие на обработку переданных мною персональных данных в соответствии с п.1 ст. 6 ФЗ РФ № 152 «О персональных данных». Обработка персональных данных осуществляется на территории Российской Федерации.</span>
-              </label>
-            </div><a class="feedback__button js-feedback-send btn-form-1">Отправить</a>
-          </form>
-        </div>
-      </div>
-      <div class="popup popup-sample">
-        <div class="popup__close">
-        </div>
-        <h1>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deserunt, sunt?</h1>
-      </div>
-    </div>
-    <div class="scroll-top">
-    </div>
-    <script src="js/app.js"></script>
-  </body>
+  </div>
+  <div class="scroll-top">
+  </div>
+  <script src="js/app.js"></script>
+</body>
+
 </html>

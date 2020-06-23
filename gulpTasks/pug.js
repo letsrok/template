@@ -3,6 +3,7 @@ const gulp = require('gulp'),
       filter = require('gulp-filter'),
       rename = require('gulp-rename'),
       removecomments = require('gulp-remove-html-comments'),
+      formatHtml = require('gulp-format-html'),
       getData = require('jade-get-data')('app/json');
 
 module.exports = function() {
@@ -14,6 +15,7 @@ module.exports = function() {
         data: {getData}
       }))
       .pipe(removecomments())
+      .pipe(formatHtml())
       .pipe(rename({ dirname: '.' }))
       .pipe($.gulp.dest('build/'));
   });

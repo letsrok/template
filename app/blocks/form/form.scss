@@ -125,8 +125,11 @@
 
 	&__content {
 		font-weight: 400;
-		display: block;
-		font-size: 12px;
+
+		.feedback__form & {
+			display: block;
+			font-size: 12px;
+		}
 	}
 }
 
