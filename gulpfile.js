@@ -2,8 +2,6 @@
 
 const del = require('del');
 
-
-
 global.$ = {
   path: {
     task: require('./gulpTasks/tasks.js')
@@ -22,7 +20,10 @@ $.gulp.task('serve', function() {
     $.browserSync.init({
         server: {
             baseDir: "./build"
-        }
+        },
+        reloadOnRestart: true,
+        injectChanges: true,
+        open: false
     });
     $.browserSync.watch('build', $.browserSync.reload);
 });
