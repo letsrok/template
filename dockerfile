@@ -9,7 +9,7 @@ COPY . /app
 WORKDIR /app
 
 # Установка зависимостей из package.json
-RUN npm install && npm install browser-sync-client
+RUN npm install
 
 # Запуск сборки с помощью npm run start
 CMD ["npm", "run", "start"]

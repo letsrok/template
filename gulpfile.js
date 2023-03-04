@@ -21,9 +21,8 @@ $.gulp.task('serve', function() {
         server: {
             baseDir: "./build"
         },
-        reloadOnRestart: true,
-        injectChanges: true,
-        open: false
+        open: false,
+        notify: false,
     });
     $.browserSync.watch('build', $.browserSync.reload);
 });

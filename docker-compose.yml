@@ -1,0 +1,15 @@
+version: '3'
+services:
+  letsrrrok:
+    image: letsrrrok:template
+    ports:
+      - "3000:3000"
+      - "3001:3001"
+    volumes:
+      - ./app:/app/app
+      - ./build:/app/build
+      - ./templates:/app/templates
+      - ./gulpTasks:/app/gulpTasks
+      - ./gulpfile.js:/app/gulpfile.js
+    stdin_open: true
+    tty: true
